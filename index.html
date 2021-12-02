@@ -5,7 +5,44 @@
   <title>Game of Life</title>
 </head>
 <body>
+
   <canvas></canvas>
   <script src="index.js"></script>
+  
+  <input type="file" id="file-selector" multiple>
+<script>
+  const fileSelector = document.getElementById('file-selector');
+  fileSelector.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    console.log(fileList);
+  });
+</script>
+
+<!-- from https://www.geeksforgeeks.org/how-to-read-a-local-text-file-using-javascript/ -->
+
+   <input type="file" name="inputfile"
+            id="inputfile">
+            
+    <br>
+    
+    <pre id="pattern1"></pre>
+    
+    <br>
+   
+    <pre id="output"></pre>
+      
+    <script type="text/javascript">
+        document.getElementById('inputfile')
+            .addEventListener('change', function() {
+              
+            var fr=new FileReader();
+            fr.onload=function(){
+                document.getElementById('output')
+                        .textContent=fr.result;
+            }
+              
+            fr.readAsText(this.files[0]);
+        })
+    </script>
 </body>
 </html>
