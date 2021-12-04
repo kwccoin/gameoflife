@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: 'Georgia';
+    height: 100%;
+}
+
+.top-nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top-nav a {
+    color: grey;
+    text-decoration: none;
+}
+
+.top-nav a:hover {
+    color: black;
+}
+
+.top-nav a.active {
+    color: black;
+}
+
+.hero {
+    margin: 15rem 0 0 8rem;
+    width: 40%;
+    font-family: 'Open Sans';
+}
+
+.hero span {
+    font-size: 64px;
+    padding-right: 0.8rem;
+}
+
+#gravity-body h2 {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    font-size: 20px;
+}

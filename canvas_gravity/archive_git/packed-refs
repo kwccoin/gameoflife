@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+2a494dfa092ec5ae118826f409a3e20671869683 refs/remotes/origin/GianFrancescoGonzaga-patch-1
+bacd1c9653bbd3610cc2ba1e91ebe8bac83a37a7 refs/remotes/origin/dependabot/npm_and_yarn/browserslist-4.16.6
+a2578967211db0b96b9ac6279b913e0ba4d6ce36 refs/remotes/origin/dependabot/npm_and_yarn/elliptic-6.5.4
+b73b2ab89c2b2a7fcb84d343ca3284d3431436dd refs/remotes/origin/dependabot/npm_and_yarn/hosted-git-info-2.8.9
+19c185fcdada495d89698515cc8439e5fbbfcb3b refs/remotes/origin/dependabot/npm_and_yarn/ini-1.3.7
+f194e0194464f7aa793e876b5845ce268e72319a refs/remotes/origin/dependabot/npm_and_yarn/lodash-4.17.21
+7457a589c6065143a1cd82ac27042a76f2bf9332 refs/remotes/origin/dependabot/npm_and_yarn/path-parse-1.0.7
+7688e3d1e8ddad159c3e141b5865075870ef7838 refs/remotes/origin/dependabot/npm_and_yarn/ssri-6.0.2
+d1612fc483f3a1797afe699184ab3bdb9fabf727 refs/remotes/origin/dependabot/npm_and_yarn/y18n-3.2.2
+8bee34ac38360a262252154164a9f95bb27d7096 refs/remotes/origin/ep-1
+de4d047024a4422766544274579098fa7b3fa929 refs/remotes/origin/master
