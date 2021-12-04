@@ -124,52 +124,107 @@ addEventListener('resize', function () {
   init();
 }); // Objects
 
-var _Object = /*#__PURE__*/function () {
-  function Object(x, y, radius, color) {
-    _classCallCheck(this, Object);
+var gravity = 1;
+var friction = .9;
+
+var Ball = /*#__PURE__*/function () {
+  function Ball(x, y, dx, dy, radius, color) {
+    _classCallCheck(this, Ball);
 
     this.x = x;
     this.y = y;
+    this.dx = dx; // not much but can be useful if one do also x movement
+
+    this.dy = dy;
     this.radius = radius;
     this.color = color;
   }
 
-  _createClass(Object, [{
+  _createClass(Ball, [{
     key: "draw",
     value: function draw() {
       c.beginPath();
       c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
       c.fillStyle = this.color;
       c.fill();
+      c.stroke(); // give it a kind of boundary
+
       c.closePath();
     }
   }, {
     key: "update",
     value: function update() {
+      if (this.y + this.radius > canvas.height) {
+        // once exceed the height it change the sign
+        // before draw it already less than the height
+        // hence max height
+        this.dy = -this.dy * friction;
+      } // / 1.1 slow too much // / 0.9 cannot slow enough 
+      else {
+          this.dy += gravity;
+        }
+
+      this.y += this.dy;
+
+      if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+        this.dx = -this.dx; // * friction
+      }
+
+      this.x += this.dx; // console.log("dy= this.dy"+" , y="+this.y)
+
       this.draw();
     }
   }]);
 
-  return Object;
+  return Ball;
 }(); // Implementation
+// let objects // not sure it seems the object array is change to just array here
+// var ball;
 
 
-var objects;
+var ballArray = []; // no special array of object actually??
+
+var noOfBalls = 500; // 500;
+// var initial_dx = 2;
+// var initial_dy = 3;
+
+var ball_radius = 5;
+var colorArray = ['red', 'green', 'blue']; // var ball_color = 'red';
 
 function init() {
-  objects = [];
+  // objects = []
+  ballArray = []; // for resize
 
-  for (var i = 0; i < 400; i++) {// objects.push()
-  }
+  for (var i = 0; i < noOfBalls; i++) {
+    var initial_x = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(0, canvas.width);
+    var initial_y = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(0, canvas.height);
+    var initial_dx = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(-3, 3);
+    var initial_dy = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomIntFromRange"])(3, 20);
+    var ball_color = Object(_utils__WEBPACK_IMPORTED_MODULE_0__["randomColor"])(colorArray);
+    ballArray.push(new Ball(initial_x, initial_y, initial_dx, initial_dy, ball_radius, ball_color));
+  } //ball = new Ball(canvas.width / 2, 
+  //                    canvas.height / 2, 0, 2, 30, 'red')
+  // console.log(ball)
+  // console.log(ballArray)
+  // for (let i = 0; i < 400; i++) {
+  //   // objects.push()
+  // }
+
 } // Animation Loop
 
 
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, canvas.width, canvas.height);
-  c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y); // objects.forEach(object => {
+  c.fillText('......', mouse.x, mouse.y);
+
+  for (var i = 0; i < ballArray.length; i++) {
+    ballArray[i].update();
+  } //ball.update();
+  // objects.forEach(object => {
   //  object.update()
   // })
+
 }
 
 init();
