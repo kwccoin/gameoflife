@@ -1,0 +1,375 @@
+bplist00“_WebMainResource_WebSubresources’	
+^WebResourceURL_WebResourceFrameName_WebResourceData_WebResourceMIMEType_WebResourceTextEncodingName_:http://www.radicaleye.com/lifepage/lifepage.html#glossbackPO@º<html><head><title>Paul's Page of Conway's Life Miscellany</title>
+</head><body><h1>Patterns, Programs, and Links for Conway's Game of Life</h1>
+<a href="java.html"><img src="puftrn.gif" alt="[A Life pattern called the puffer train]"></a>
+<br>
+<h2>Update (11-Feb-01)</h2>
+This is the new location for the Game of Life 
+page that I began in 1995 while at
+Johns Hopkins.  If you have a link to the old URL, I'd appreciate
+it a lot if you could update it.
+I'm cleaning up some broken
+links for this release. Otherwise, it is roughly where I left it in 1998.
+The web has exploded with Life and general cellular automata 
+resources since I began work on
+this page.  An excellent starting point
+is the
+<a href="http://dmoz.org/Computers/Artificial_Life/Cellular_Automata/Conway's_Game_Of_Life/">Open Directory Life index</a>, maintained by 
+Mirek Wojtowicz.
+<p>
+My email address is
+<a href="mailto:callahanp@acm.org">callahanp@acm.org</a>.
+Despite my inactivity on these pages,
+I still read this mail regularly and appreciate comments.  I don't always
+remember to answer it, so send me a reminder if you
+don't hear from me in a couple of weeks.
+</p><p>
+--Paul
+</p><h2><a name="contents">Contents</a></h2>
+<ul>
+<li><a href="#welcome">Welcome</a>
+</li><li><a href="#aboutpic">About the Picture</a>
+</li><li><a href="#browse">Browsable Pattern Catalog</a>
+</li><li><a href="#newresults">Selected Topics</a>
+</li><li><a href="#myres">Resource List</a>
+</li><li><a href="#otherpages">Other Game of Life Pages</a>
+</li><li><a href="#addres">Additional Resources</a>
+</li><li><a href="#offnet">Off-line Resources</a>
+</li></ul>
+<h2><a name="welcome">Welcome</a></h2>
+Welcome to my page of odds and ends about Conway's Game of Life.
+This page is an on-going work, which I hope to expand regularly.
+This page now contains descriptions of files I have
+made available for ftp, links to
+Life resources available elsewhere on the Internet,
+new results
+and patterns not archived elsewhere,
+and a browsable hypertext catalog of Alan Hensel's
+archive of Life patterns, including a hypertext version of
+his Life glossary.  All the patterns except those in the
+glossary are Java-animated, so if you have a Java-compatible
+browser, such as Netscape 2.0, you may want to skip right
+to the <a href="patterns/contents.html">catalog</a> and take a look.
+<p>
+I should mention that
+while writing this page, I have generally assumed that the reader has
+at least <em>heard</em> of the Game of Life.  But if you haven't,
+please don't let that stand in your way.
+<a href="http://www.tech.org/~stuart/life/rules.html">A brief explanation</a> can already be found elsewhere on the Web.
+</p><p>
+</p><h2><a name="aboutpic">About the Picture</a></h2>
+Depicted at the top of the page--if you don't recognize it already--is the
+classic puffer train.  This is what it looks like after
+800 <em>generations</em>, or applications of
+Game of Life transition rules.
+An exact duplicate of the initial pattern can be seen
+at the right end of the above picture, displaced 400 cell
+units from where it started, near the left end of the picture.
+The term "puffer train" was coined to describe just this pattern,
+because of the way it propagates forward while leaving a
+trail of "smoke" behind it.  Since the time of its
+discovery, a great many
+patterns have been discovered with similar properties, and 
+the term "puffer" has come to encompass the entire class.
+The Life pattern used to generate this picture appears in
+the browsable archive below.
+It is called <a href="patterns/puftrain.html">puftrain.lif</a>.
+
+<h2><a name="browse">Browsable Pattern Catalog</a></h2>
+My <a href="patterns/contents.html" name="catback">illustrated catalog</a> of 
+Life patterns
+provides the most convenient way yet to browse
+Alan Hensel's extensive archive of Life patterns.
+Linked to each pattern image is a page displaying comments,
+and you can examine and download the entire pattern file
+for viewing in a Life program on your machine.
+Better yet, if your browser supports Java, an applet will
+appear and start a Life animation automatically.
+<p>
+Alan's comments for
+the patterns are often terse 
+(well, it's an awful lot of material to document)
+and use a rather specialized
+terminology.  You may wish to refer to the
+<a href="picgloss/picgloss.html" name="glossback">illustrated glossary</a> 
+adapted from the one that
+Alan provided in his distribution
+A <a href="glossary.html">text version</a>
+of the glossary is provided
+for those who are using a text-only browser,
+or who do not have a fast connection.
+For an even more comprehensive list of Life terms, see
+<a href="http://www.argentum.freeserve.co.uk/lex.htm">Stephen Silver's lexicon</a>.
+</p><h2><a name="newresults">Selected Topics</a><a></a></h2><a>
+These links delve into the theory, operation,
+or design history of Life patterns and whole classes of patterns.
+The format is mixed and includes articles I've written for
+the page, as well as mail digests and contributed articles.
+In contrast to
+the pattern catalog, the emphasis here is on verbal explanation.
+Numerous patterns are nonetheless included as examples, and
+can be viewed in the applet or downloaded as ASCII files.
+Dates denote time of addition to this page.
+</a><ul><a>
+</a><li><a> Mail digest on 
+</a><a href="patterns/p24gun/p24gun.html">Noam Elkies' 
+period-24 glider gun</a>: the densest
+non-interleaved (or "true") glider gun known
+(<em>20-Dec-97</em>).
+</li><li> An 
+<a href="patterns/ssrefl/ssrefl.html">improved
+stable reflector</a> and related results by Stephen Silver
+(<em>20-Dec-97</em>).
+</li><li> Bill Gosper's <a href="patterns/apd/apd.html">totally
+aperiodic glider wave</a> (abridged mail digest)
+(<em>20-Dec-97</em>).
+</li><li> Dieter Leithner's <a href="patterns/p57/p57.html">period-57
+Herschel oscillator</a>
+(<em>20-Dec-97</em>).
+</li><li> Links to descriptions of <a href="altrule.html">some
+alternative CA rules</a>
+(<em>20-Dec-97</em>).
+</li><li>David Buckingham on 
+<a href="patterns/bhept/bhept.html">B-heptomino/Herschel oscillators</a>
+(<em>17-Apr-97</em>).
+</li><li>David Bell's <a href="patterns/newc5/newc5.html">c/5 spaceship</a>
+(<em>17-Apr-97</em>).
+</li><li>David Bell's <a href="patterns/c3puf/c3puf.html">c/3 puffers</a>
+(<em>17-Apr-97</em>).
+</li><li>Mail digest on
+<a href="patterns/gliderless/gliderless.html">gliderless spaceship guns</a>
+(<em>12-Apr-97</em>).
+</li><li>
+<a href="enoexcerpt.html">Brian Eno on Life</a>
+and its connection to generative music (<em>11-Mar-97</em>).
+</li><li>Dean Hickerson's original description of his
+<a href="patterns/sbm/sbm.html">sliding block memory</a> 
+(<em>2-Dec-96</em>).
+</li><li>Alan Hensel's discussion of
+<a href="patterns/linepuf/linepuf.html">line puffers</a>
+(<em>2-Dec-96</em>).
+</li><li>Life's <a href="patterns/p1/p1.html">Holy Grails</a>: stable reflectors and
+Herschel tracks 
+(<em>27-Nov-96</em>).
+</li><li>Dieter Leithner and Peter Rott's collection of 
+<a href="patterns/gunprev.html">smallest known glider guns</a> 
+(<em>12-Oct-96</em>).
+</li><li> The smallest known
+<a href="patterns/p15.html">pseudo period-15 glider gun</a> 
+(<em>16-Aug-96</em>).
+</li><li> My 
+<a href="patterns/delay/dldesc.html">extensible delay line memory</a>.
+(<em>5-Mar-96</em>).
+</li><li> David Bell's 
+<a href="patterns/unitcell/ucdesc.html">unit Life cell</a>
+(<em>1-Mar-96</em>).
+</li><li> Tim Coe's 
+<a href="patterns/dspark/dspark.html">c/4 diagonal sparkers</a>
+(<em>1-Mar-96</em>).
+</li><li> Tim Coe's 
+<a href="patterns/p5ss.html">c/5 orthogonal spaceship</a>
+(<em>31-Jan-96</em>).
+</li><li> New results on the 
+<a href="patterns/sf/sfiller.html">spacefiller</a>
+(<em>15-Nov-95</em>).
+</li><li> Tim Coe's new 
+<a href="patterns/p16/p16.html">period-16 puffer engine</a>
+(<em>13-Nov-95</em>).
+</li></ul>
+
+<h2><a name="myres">Resource List</a></h2>
+Since about 1990, I have been using the Internet regularly to communicate
+with others interested in Conway's Game of Life. 
+The introduction of the World Wide Web protocol and the current availability
+of browsers has greatly enhanced the Internet's 
+potential for this purpose.
+The following list contains those Web resources best known to me,
+along with a brief description.  The list 
+is presented roughly in order, starting with what is readily
+accessible and fun for the novice, and 
+progressing towards the more specialized and esoteric:
+
+<ul>
+  <li>A Web-page implementation of
+   <a href="http://www.tech.org/~stuart/life/life.html">John Conway's 
+   Game of Life</a>. This one is, of necessity, 
+    slow and limited to a tiny cell universe, but it's
+    an ingenious application of check boxes and it even runs in lynx.
+  </li><li>Some patterns and Life implementations available in my ftp directory.
+       <ul>
+         <li>Alan Hensel's zip-compressed archive of some of the world's most
+         remarkable Life
+            <a href="http://www.mindspring.com/~alanh/lifep.zip">patterns</a>.  To see these in action,
+         you need a <em>fast</em> 
+         Life simulator that works with Hensel's format.  Some useful
+         documentation is included along with the patterns.
+  </li><li>Alan Hensel's lightning-fast
+       <a href="http://www.mindspring.com/~alanh/life16.zip">MS/DOS
+implementation</a> of Life.  Conveniently enough, this program works with his
+pattern format.
+       </li><li>Compressed source for 
+<a href="http://surf.de.uu.net/zooland/download/packages/xlife/xlife-3.0.tar.gz">Xlife 3.0</a>, an X-windows implementation of Life.  This accepts
+Hensel's format as well, but expects pattern files to have a ".life" suffix.
+       </li><li>A semi-official upgrade
+<a href="ftp://ftp3.mathe.uni-jena.de/pub/X11/xlife35.tar.gz">Xlife 3.5</a> at
+Achim Flammenkamp's web site.  Enhancements are box cut-and-paste
+commands that I added but never released, and sub-pixel zooming by
+Achim for viewing extremely large patterns.
+     </li></ul>
+   </li><li>Stephen Silver's comprehensive <a href="http://www.argentum.freeserve.co.uk/lex.htm">Life Lexicon</a>. 
+   </li><li> X Motif source code I wrote for a 4-color version of life.
+The rules governing live and dead cells are the usual ones.  However
+a cell can be one of four different colors, and these colors change
+according to a majority rule.  This is distributed as a
+<a href="colorlife.tar.gz">gzipped Unix tape archive</a>.
+  </li><li> My <a href="stilledit.html">Java still life generator</a>, 
+       which uses an iterative approach to find patterns that
+       are stable under life rules.
+  </li><li>David Bell's definitive treatise on
+  <a href="http://alife.santafe.edu/~joke/rsc/ships_toc.html">Spaceships in Conway's Game of Life</a>, originally distributed as a Usenet
+article in flat ascii text, but since converted by Joerg Heitkoetter into
+an HTML document available through the Web.
+  </li><li>A Unix shell archive of David Bell's 
+   <a href="lifesearch.txt">search program</a> 
+    that finds low-period oscillators and 
+    spaceships.  
+    Many of the spaceships discussed in Bell's article were originally
+    found with just such a search program.
+    Note that this is the <em>5 Feb 94</em> release, which
+    contains features not found in the older versions archived elsewhere.
+  </li><li>The Usenet newsgroup <a href="news:comp.theory.cell-automata">comp.theory.cell-automata</a>, which is devoted
+to the more general subject of cellular automata, 
+but where Game of Life discussions are not unheard of.  
+  </li><li>My December '94 Usenet article containing C source code for a
+<a href="gencols.txt">collision-enumeration program</a>.
+      Unfortunately, my program is not very user-friendly. It works 
+      with files and
+      command-line arguments, and won't give you much of anything unless
+      you know just what you are looking for.  It has, however, resulted in
+      some surprising finds.  This is mainly of interest
+      to the hardcore Life enthusiast with a lot of patience and
+      a high tolerance for frustration.
+</li></ul>
+
+<h2><a name="otherpages">Other Game of Life Pages</a></h2>
+A great place to start looking for Game of Life information is the
+<a href="http://dmoz.org/Computers/Artificial_Life/Cellular_Automata/Conway's_Game_Of_Life/">Open Directory Life index</a>.
+Here's my own random smattering of related links.
+<ul>
+<li>Mark Niemiec's 
+<a href="http://home.interserv.com/~mniemiec/lifepage.htm">massive
+compendium</a> of glider syntheses, still life enumerations, and other
+information for the true enthusiast.
+</li><li> Robert Wainwright's
+<a href="http://members.aol.com/life1ine/life/index.html">LIFEPAGE</a>.
+This page collects information about Life patterns and results, as well
+as an index to LIFELINE, a newsletter edited by Wainwright
+from 1971 through 1973 in which many important results first appeared.
+</li><li> 
+<a href="http://www.uni-bielefeld.de/~achim/gol.html">Achim's
+Game of Life Page</a>. This page, maintained by Achim Flammenkamp, contains
+patterns, life results, and software, 
+including Xlife 3.5, a newer release of Xlife containing some
+user-interface enhancements.
+</li><li>
+Alan Hensel's
+<a href="http://www.mindspring.com/~alanh/life/">fast,
+powerful life applet</a> runs patterns in his collection
+and (unlike mine) also works interactively.
+</li><li>
+H. Koenig's page of
+<a href="http://www.pentadecathlon.com/LifeInfo/LifeInfo.html">Game of
+Life Information</a>, which includes a listing of glider constructions.
+</li><li>
+A <a href="http://www.treasure-troves.com/life/">compilation
+of Life information</a> in
+Eric Weisstein's
+<a href="http://www.treasure-troves.com">Treasure 
+Troves</a>.
+</li></ul>
+
+<h2><a name="addres">Additional Resources</a></h2>
+Here is a sampling of related resources.  I have not had
+the time to keep this list up to date ever since starting it in 1995.
+However, I am confident that starting here, 
+almost everything can be found just
+a few links away.
+<h3>Programs that can read patterns in Alan Hensel's archive</h3> 
+<ul>
+<li>
+<a href="http://psoup.math.wisc.edu/Life32.html">Life32</a>
+for Windows 95/98/NT by Johan Bontes. 
+Alan Hensel calls this
+"by far, the best Life program
+for 32-bit Windows ... extremely fast, powerful, and easy to use."
+I've seen this demonstrated, and concur with Alan.
+</li><li>W-Life,
+ported by Glen Summers, for PC's running MS-Windows 3.1.
+A decent port of Xlife to Microsoft Windows.  Note that this is
+a port of Xlife 2.0, released in 1989.  <em>I do not have an
+up to date link for this software.</em>
+</li><li>
+<a href="ftp://ftp.digital.com/pub/games/winlife.zip">WinLife</a>
+ by John Harper, for PC's running MS-Windows 3.1.
+Probably the best overall Windows Life program.
+</li><li>
+<a href="http://www.kagi.com/akt/lifelab.html">LifeLab</a> 
+by Andrew Trevorrow, for Macs -- Mac Plus to Power Mac.
+Very powerful.  Autodetects gliders and oscillators, has
+sophisticated editing, does automated searches for new patterns.
+</li></ul>
+
+<h3>Artificial Life Resources</h3>
+It is the source of 
+much, occasionally rancorous, 
+<a href="http://alife.santafe.edu/alife/topics/cas/threads/life-alife/">debate</a>
+as to whether Conway's Game of Life
+and the field of artificial life have anything to do with one
+another, apart from the somewhat coincidental name correspondence.  
+Both involve the study of complex, seemly unpredictable systems, so
+the connection is not entirely arbitrary.  In any case, the
+following resources are in themselves interesting, and may help
+you find additional resources related to the Game of Life.
+<ul>
+<li><a href="http://www.fusebox.com/cb/alife.html">The 
+Live Artificial Life Page</a> contains links to animations 
+of artificial life systems on the Web.  
+</li><li><a href="http://surf.de.uu.net/zooland/">Zooland</a>
+is an extensive index to artificial life resources on the Internet.
+</li><li><a href="news:comp.ai.alife">comp.ai.alife</a> is a Usenet
+group for the discussion of artificial life.
+</li><li>David Griffeath's
+<a href="http://psoup.math.wisc.edu/kitchen.html">Primordial Soup 
+Kitchen</a> contains interesting patterns produced by all sorts of
+complex systems, including the Game of Life.
+</li></ul>
+<h3>Contributors</h3>
+The above links were contributed by Alan Hensel, 
+Joerg Heitkoetter, and David Griffeath. 
+<h2><a name="offnet">Off-line Resources</a></h2>
+Not everything to do with the Game of Life can be found on
+the Internet, at least not yet.  Alan Hensel has compiled
+a <a href="lifebiblio.html" name="lifebiblioback">bibliography</a> 
+of books and articles on the Game of Life.
+<hr>
+This page is maintained by
+Paul Callahan <em>(last update: 11-Feb-01)</em>.
+</body></html>Ytext/htmlUUTF-8°‘_WebResourceResponse_-http://www.radicaleye.com/lifepage/puftrn.gifOGIF89aµó Ä     ˇˇˇ!˘   ,    µó  ˛åè©ÀÌ£ú¥⁄ã≥ﬁº˚Ü‚HñÊâ¶Í ∂Ó«ÚL◊ˆçÁ˙Œ˜˛
+áƒ¢ÒàL*óÃ¶Û	çJß‘™ıäÕj∑‹Æ˜” ÄÒÖåDã◊lFπ,#√'ÔcΩç«´cÍyd_ò7H»Ç&Xò®∏H!«¯ô‡'Yiyâô©πô‚»˘	EJ 8˙tZ™öw(Âπ
++Ñw7€ò
+tÀK≤;“∑ÒÎSkê€ã¨´@9ÏzpúΩÛFçp-˙*Ω˝≥7WßΩÖÕMŒ˛‹Ï\ŒN´·¯}}«5ﬁnˇPø[›•~øÌﬂ∑ˇt»N`?˙Ú5ƒq°ƒ}‡‚´eQ\æ˛â‹‚M»Åô©å1y3eHkèHñ¥t
+‰§ï∆T∏|âòLñ*ﬂ…πYa^Œ°Ê†ÖÉ‡©Uãå@âjöëŒ≥ç5?6Ñw"fΩVMªEu ∞ÍT™ äÒÙìÎËQ`dœ`µb,°Sª.§vßΩe≈b∏w¨‹πnﬁ¢K∑ß_ù⁄Õµ”ZáÉìÏ¬ã∞/ãâó>[¯≥!—D°=yd“ú‚V>≥òÚjs≥ï∞ésg‰ªy+vê˚ıáﬁ>]Ôêz/±îøc+ìˆjÚqù«¶´π58ÕüõhnPwﬂ<¡wè	πv–3%Éï.9BÃ>€∂.[0CèŒ˛+UŸüDÙ‡_ix◊O·°∑-$~ÈAà¬eÚ-U‡
+∆A÷\	~ñá›pMπFëâ¿5à\~ÑÕtX("≈Z˚]ó·å≤§5Õ9Èó°}Õb#∫◊·è˚¥%¡ë}Èã!Iî-J¢Ñb#P≤•gTæ√ÉfWnt¢ì≈19Üòs}I†~r·Â&lõπefc@÷âö≤DXYåÀπ5T$æ¿fõÖˆrhÖâ>¿L≈,˙îçÅç©Âì…(•'*î‚≥§YpÂiVõ2öÈWYÚÚ?x˛Ö‘™K
+„Íî_û h¨ô–jPúj‹ZùqZé:~ÍäaÅ q˛Ïfú}¥B®í` Í†Å)-mÖµG§6‰lÇ›z–h•ƒKjµÑòl†b˘mä¶:nïâJªtÿ+oóiÊÜ¢@‡:[d´¯
+lá≠¨¸/†◊ÚôÆ\∫3*™t6ﬂy \)Iøj¡∆™)Ãámﬁ h£áÒFô©)’Ò ◊⁄µ,S.K≈≤Ã0∑<|∫,Zò:lgã°}º“UA"r≥—3#ÓÃgµJÙuJgˆÙö8ö|r≠Ã>ô*’NòÁ◊ËÑ›5Ÿ˘R[vπi£}6⁄–*Ÿ^·≤Ñﬁÿÿ&ÏŒ‘Pﬂ¶ﬁZÛ∑ﬂ+F›w•ôÈ,¥>@ÀΩ‰r2„Ûû5√˛vÛ‰87myÊ8jisõR-[j¿Ñ/<i«8-»/öû∫∏XnΩ9Ï4ﬂ%{ÓÖËz¨^Ì+Â˚ÀØÎ€§É¡O¡ªz-Ÿ-6uµ„ö.1Äø»£π(ß}–DTºx	sIm÷ªZeu”[M:ÒÏÅòÓ·Ÿv˛4ÒÁJ>¨d6≠’€∞»Õœàu+F¯Ç‹Òÿó<π—ËÄ	Úûã‘gï˜˝OTmqüp0¬@àà'Å™ÿ6U7Ò¬1€˙…µ∞ïYˇ…‡ˆ\X8‰¡àﬂSƒ	X¢Ç›	Étõ`}∫aô%–êñ1_π|XﬂÑ0ÕB"ˇp(-8ç∞bç„˛Öt”dÒ$W‹ŸX~e^-¶{iJÕP¡RêQdÓ™◊µ∑±«áÑl÷Î◊9N%9ôävHú9˙Âxl#˝ƒh«?™ld9´„ﬂ ;0=RÉLZcÔx9W§¢èNƒ≤È=
+›ptX „é«»—¢:04%y3J	2Qõ¨QUnS'[ù7Cì^'Åà…h·"á,à%ìò&¯˝Rz¡¥I]û•XÆ©ãd_˘‚QÀ)ıÆIeBÉ<	Ev%é›ºôòg?Ü”{;‰9õyÕ¡HìPäÀŒÊﬁF3n™”)«4í=%Ÿìà`lù»:„<á∂NÍë†à‰XÕÜ:`—Ç∆Ñ'CIıÕ4‰@cÀº®¶*	J.Ì"rÚ(+æÛ.oÊSv&m)-]tPó‚∞lTî©MõòØÒ‹tßöO
+‘†
+u®»à©>uHTBU{L™Sü
+’®Ju™T≠™UØä’¨j’$˝ñ(;∫’2äö~$eX≠*5-ı¨•ëîCT…V≠Óƒåq=+“tZ◊ºb«¢zù_˚
+ÿ¿
+6∞kù‰`Ô· 0Åı∞y+cŸ»Jv≤î≠¨e/ãŸÃjv≥úÌ¨g?⁄–^†  ;Yimage/gifOÓbplist00‘
+X$versionY$archiverT$topX$objects Ü†_NSKeyedArchiver—	_WebResourceResponseÄØ'-.4567QRSTUVWXYZ[\]^_`abcdeiU$null› !"#$%&___nsurlrequest_proto_prop_obj_6___nsurlrequest_proto_prop_obj_3R$2___nsurlrequest_proto_prop_obj_0R$3___nsurlrequest_proto_prop_obj_4V$class___nsurlrequest_proto_prop_obj_1R$4R$0___nsurlrequest_proto_prop_obj_5___nsurlrequest_proto_prop_obj_2R$1ÄÄÄ	ÄÄÄÄ Ä”()$+,WNS.base[NS.relativeÄ ÄÄ_-http://www.radicaleye.com/lifepage/puftrn.gif“/012Z$classnameX$classesUNSURL¢13XNSObject#A√≠îÑâ◊M »”89:EPWNS.keysZNS.objects™;<=>?@ABCDÄ	Ä
+ÄÄÄÄÄÄÄÄ™FHIJKLMNOÄÄÄÄÄÄÄÄÄÄÄVServer\Content-TypeZConnection]Last-ModifiedX__hhaa__TDate]Accept-Ranges^Content-LengthZKeep-AliveTEtagVApacheYimage/gifZkeep-alive_Sun, 20 Nov 2016 19:55:19 GMT_Ï
+
+YnBsaXN0MDDZAQIDBAUGBwgJCgwOEBIUFhgaVlNlcnZlclxDb250ZW50LVR5cGVURXRhZ11MYXN0LU1vZGlmaWVkVERhdGVdQWNjZXB0LVJhbmdlc15Db250ZW50LUxlbmd0aFpLZWVwLUFsaXZlWkNvbm5lY3Rpb26hC1ZBcGFjaGWhDVlpbWFnZS9naWahD18QEyI2ZjAtNTQxYzBlYjMxZjdjMCKhEV8QHVN1biwgMjAgTm92IDIwMTYgMTk6NTU6MTkgR01UoRNfEB1TYXQsIDA0IERlYyAyMDIxIDA0OjQxOjI5IEdNVKEVVWJ5dGVzoRdUMTc3NqEZWnRpbWVvdXQ9MTWhG1prZWVwLWFsaXZlAAgAGwAiAC8ANABCAEcAVQBkAG8AegB8AIMAhQCPAJEApwCpAMkAywDrAO0A8wD1APoA/AEHAQkAAAAAAAACAQAAAAAAAAAcAAAAAAAAAAAAAAAAAAABFA==_Sat, 04 Dec 2021 04:41:29 GMTUbytesT1776Ztimeout=15_"6f0-541c0eb31f7c0"“/0fg_NSMutableDictionary£fh3\NSDictionary“/0jk_NSHTTPURLResponse£lm3_NSHTTPURLResponse]NSURLResponse    $ ) 2 7 I L b d Ü å ß … Î Ó5<^adÜ®´≠Ø±≥µ∑πªºæ¿¬ƒÀ”ﬂ·„Â%.47@IKMT\grtvxz|~ÄÇÑÜëìïóôõùü°£•ßÆª∆‘›‚ˇ
+ +K;[afqáå¢¶≥∏Ã–‰             n              Ú    1 < K b t ä ® Â ÊA¶A∞A∂A∏A¡A◊BH˚I                           O˜

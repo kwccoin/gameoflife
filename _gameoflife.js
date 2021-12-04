@@ -14,6 +14,9 @@ function buildGrid() {
       .map(() => Math.floor(Math.random() * 2)));
 }
 
+let grid2 = buildGrid();
+console.log(grid2);
+
 let grid = buildGrid();
 
 requestAnimationFrame(update);
@@ -72,4 +75,3 @@ function render(grid) {
     }
   }
 }
-
