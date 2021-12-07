@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+
+
+<h1>Android Calculator</h1>
+
+<body>
+    <div id="mycontainer">
+        <div>
+            <div class="containerCal">
+                <div class="item item-header1" id="expressionString"></div>
+                <div class="item item-header2" id="expressionResult"></div>
+
+                <input class="btn btnC" id="reset" type="button" value="C" onclick="reset()" />
+                
+                <input class="btn" id="backKey" type="button" value="<<" onclick="removeLastChar()" />
+                <input class="btn key" type="button" value="/" />
+                <input class="btn key" type="button" value="*" />
+
+                <input class="btn key" type="button" value="9" />
+                <input class="btn key" type="button" value="8" />
+                <input class="btn key" type="button" value="7" />
+                <input class="btn key" type="button" value="-" />
+
+                <input class="btn key" type="button" value="6" />
+                <input class="btn key" type="button" value="5" />
+                <input class="btn key" type="button" value="4" />
+                <input class="btn key" type="button" value="+" />
+
+                <input class="btn key" type="button" value="3" />
+                <input class="btn key" type="button" value="2" />
+                <input class="btn key" type="button" value="1" />
+                <input class="btn orange equal" id="Submit1" type="button" value="=" onclick="evaluationExpression(this.value, false)" />
+
+                
+                <input class="btn key" type="button" value="0" />
+                <input class="btn key" type="button" value="." />
+                <input class="btn" type="button" value="" />
+
+            </div>
+        </div>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BSywP9Uoub8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <p></p>
+
+
+
+    <fieldset>
+        <legend>Features</legend>
+        <ol>
+            <li>Display temporary result while entering number</li>
+            <li>Accept number 0-9 key, decimal and four math operator keys</li>
+            <li>Back key</li>
+            <li>Keep appending string calculation like in Android stock calculator. Example, 1+2*2 </li>
+            <li>Order of calculation is BODMAS. Example, 1+2*2=5 (not 6). For Window calculator, result is 6.</li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <legend>Design - Flow Chart</legend>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Coding Techniques Used</legend>
+        <ul>
+            <li>Main function - One addEventListener for the 0-9 keys, decimal key and all four operator (+ - * /) keys are dynamically generated using foreach loop</li>
+            <li>Some Javascript built-in function used: eval(), split(), includes()</li>
+            <li>Main Design Ideas: Check key type and last number string.</li>
+            <li>C<a href="Calculator.cshtml@css=1.html">S</a>S Grid Layout</li>
+            <li>More comment in the code<a href="CalculatorAndroidDevLog.cshtml.html">.</a></li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Source Code Summary</legend>
+        <ul>
+            <li>Total small functions: 5</li>
+            <li>Total anonymous functions: 2</li>
+            <li>Total lines of code: 162 (excluding comment)</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Test Cases</legend>
+
+        <img src="img/TestCases_Calculator.JPG" />
+    </fieldset>
+</body>
+
+
+
+<script>
+    // design notes: main things to check.
+
+    // 2. check last number string first character.
+    // if 0 and current key is numbers 1-9, then replace.
+    // if 0 and current key is 0, do nothing.
+    // if 0 and current key is decimal, then append.
+    // if 0 and current key is operator, then append.
+
+    // if 1-9 and current key is 0-9, then append.
+    // if 1-9 and current key is decimal, if not extra decimal then append. else do nothing.
+    // if 1-9 and current key is operator, then append.
+
+    // if "" and current key is numbers 0-9, then append.
+    // if "" and current key is decimal, then "0."
+    // if "" and current key is operator, then "0."
+
+
+    // 2. no need to check last number string first.
+    // if current key is numbers 0-9, then replace.
+    // if current key is decimal, then "0.".
+    // if current key is operator, replace with current operator.
+
+    // solution: add extra parameter in evaluationExpression function. tempResult = yes, no.
+
+    // todo: back button to remove the last string.
+
+    // design notes: main things to check.
+
+    // 2. check last number string first character.
+    // if 0 and current key is numbers 1-9, then replace.
+    // if 0 and current key is 0, do nothing.
+    // if 0 and current key is decimal, then append.
+    // if 0 and current key is operator, then append.
+
+    // if 1-9 and current key is 0-9, then append.
+    // if 1-9 and current key is decimal, if not extra decimal then append. else do nothing.
+    // if 1-9 and current key is operator, then append.
+
+    // if "" and current key is numbers 0-9, then append.
+    // if "" and current key is decimal, then "0."
+    // if "" and current key is operator, then "0."
+
+
+    // 2. no need to check last number string first.
+    // if current key is numbers 0-9, then replace.
+    // if current key is decimal, then "0.".
+    // if current key is operator, replace with current operator.
+
+    // solution: add extra parameter in evaluationExpression function. tempResult = yes, no.    
+
+    var keys = document.querySelectorAll(".key");
+
+    var expString = document.getElementById('expressionString');
+    var expResult = document.getElementById('expressionResult');
+    var lastNumString = "";
+
+
+    reset();
+
+    // design notes: reason to have just one dynamic addeventlistener is reduce repeat checking for numbers and operator keys.
+    keys.forEach(elem => {
+        elem.addEventListener("click", event => {
+
+            let keyType;
+
+            // 1. Check each entered key and set key type.
+            switch (event.target.value) {
+                case "0":
+                    keyType = "zero";
+                    break;
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    keyType = "number1-9";
+                    break;
+                case ".":
+                    keyType = "decimal";
+                    break;
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                    keyType = "operator";
+                    break;
+                default:
+                    break;
+            }
+
+            // 2. Check key type first.
+            // 3. Check last number string for each key type.
+            switch (keyType) {
+                case "number1-9":
+                case "zero":
+                    if (lastNumString == "0") {
+                        expString.innerHTML = replaceLastCharString((expString.innerHTML), event.target.value);
+                    } else {
+                        expString.innerHTML += event.target.value; // append
+                    }
+
+                    // After each operation, get back last number string by using regular expression to look for 
+                    // +, -, /, x for the operation checking. Thus not using any boolean to check what key type 
+                    // entered for the next operation checking.
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "decimal":
+                    if (lastNumString == "") {
+                        expString.innerHTML += "0" + event.target.value; // append leading zero.
+                    } else {
+                        //if not extra decimal then append. else do nothing.
+                        if (lastNumString.includes(".") && event.target.value == ".") {
+                            console.log('Do nothing. Reason: Prevent more than one decimal.');
+                        } else {
+                            expString.innerHTML += event.target.value; // append
+                        }
+                    }
+
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "operator":
+                    if (lastNumString == "") {
+                        expString.innerHTML += "0" + event.target.value; // append leading zero.
+                    }
+                    else {
+                        if (isLastCharAnOperator()) {
+                            expString.innerHTML = replaceLastCharString((expString.innerHTML), event.target.value);
+                        } else {
+                            expString.innerHTML += event.target.value; // append
+                        }
+                    }
+
+                    lastNumString = "";
+                    break;
+                default:
+                    console.log("Uncaught exception.");
+                    break;
+            }
+
+            evaluationExpression(expString.innerHTML, true);
+        });
+    });
+
+    // After each operation, get back last number string by using regular expression to look for 
+    // +, -, /, x for the operation checking. Thus not using any boolean to check what key type 
+    // entered for the next operation checking.
+    const lastNumberString = str => {
+        let separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?'];
+        
+        let result = str.split(new RegExp(separators.join('|'), 'g'));
+        
+        return result[result.length - 1];
+    }
+
+    const replaceLastCharString = (str, char) => {
+        // optional technique: StringUtils.chop(str);
+        // remarks substring method is not null-safe.
+        let xStr = str.substring(0, str.length - 1);
+        return xStr + char;
+    }
+
+    const isLastCharAnOperator = () => {
+        let isLastCharOperator = false;
+        let lastChar = expString.innerHTML.substring(expString.innerHTML.length - 1);
+        let operators = ["+", "-", "*", "/",];
+
+        for (let x = 0; x < operators.length - 1; x++) {
+            if (lastChar == operators[x]) {
+                // Immediately exit after an operator found.
+                isLastCharOperator = true;
+                break;
+            }
+        }
+        return isLastCharOperator;
+    }
+
+    const removeLastChar = () => {        
+        expString.innerHTML = expString.innerHTML.substring(0, expString.innerHTML.length - 1);
+
+        if (expString.innerHTML == "") {
+            reset();
+        } else {
+            evaluationExpression(expString.innerHTML, true);
+            lastNumString = lastNumberString(expString.innerHTML);
+        }
+    }
+
+    function reset() {
+        expResult.innerHTML = 0;
+        expString.innerHTML = "";
+        lastNumString = "";
+    }
+
+    const evaluationExpression = (operator, isTemp) => {
+        if (!isTemp) {
+            if (isLastCharAnOperator(expString.innerHTML)) {
+                expString.innerHTML = expString.innerHTML.slice(0, -1);
+            }
+        }
+
+        if (eval(expString.innerHTML) == null) { // if user key in equal "=" as first key.
+            expResult.innerHTML = "0";
+        } else {
+            expResult.innerHTML = eval(expString.innerHTML);
+        }
+
+        if (!isTemp) {
+            expString.innerHTML = "";
+            lastNumString = "";
+            expResult.style.color = "white";
+            expResult.style.fontSize = "50px";
+        } else {
+            expResult.style.color = "gray";
+            expResult.style.fontSize = "30px";
+        }
+    }
+</script>
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>

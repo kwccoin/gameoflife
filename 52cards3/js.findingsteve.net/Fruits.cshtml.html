@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+<style>
+
+    #wordList span {
+        background-color: lightskyblue;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    
+    #wordList span:hover {
+        background-color: #ffff99;
+        cursor: pointer;
+    }
+
+    .savedWords{
+        background-color: #ffff99;
+        padding: 6px 12px;
+        margin: 6px 6px;
+        border-right: 1px solid #c5c3c3;
+        border-bottom: 1px solid #c5c3c3;
+        display: inline-block;
+    }
+</style>
+<h1>Favorite Fruits</h1>
+
+<p>Generate 
+    <select id="numWords" name="numWords">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select> random fruits.</p>
+
+<p id="wordList"></p>
+
+<h4 id="instruction"></h4>
+
+<p></p>
+<fieldset>
+    <legend>Actual Output - Your Favorite Fruit List</legend>
+
+    <div id="favList"></div>
+</fieldset>
+
+<fieldset>
+    <legend>Coding Techniques Used</legend>
+    <ul>
+        <li>Math Object: Math.floor(), Math.random()</li>        
+        <li>Template literals (Template strings) - syntactic sugar</li>
+    </ul>
+</fieldset>
+
+
+<script>
+    "use strict";
+
+    //An Array of words
+    var rwords = ["orange", "apple", "kiwi", "banana", "grape", "durian", "mango", "watermelon", "plum", "pineapple", "guava", "pear", "strawberry", "apricot", "fig", "lemon", "lime", "papaya", "peach"];
+
+    var arrStr = "";
+
+    var numWords = 0; // default value.
+
+    document.getElementById('instruction').innerHTML = "Click the drop down list to choose.";
+
+
+    //old version
+    //function shuffleWords(o) {
+    //    for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    //    return o;
+    //};
+
+    //ES6 version
+    function shuffleWords(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }   
+        return a;
+    }
+
+    
+    function wordGen() {
+        numWords = document.getElementById("numWords").value;
+        rwords = shuffleWords(rwords);
+
+        var a = 0;
+
+        // For each loop, append a word with span tag.
+        while (a < numWords) {
+           // arrStr = arrStr + ' <span class="savedWords" id="wordspan' + a + '">' + rwords[a] + '</span>';
+            arrStr = arrStr + `<span class="savedWords" id="wordspan${a}">${rwords[a]}</span>`;
+            a++;
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+
+        document.getElementById("numWords").addEventListener("change", addWord);
+
+        //addWord();
+
+        function addWord(){
+            wordGen();
+
+            if (arrStr.length > 0) {
+                document.getElementById('instruction').innerHTML = "Click the fruit to be added into your favorite fruit list";
+            }
+
+            document.getElementById('wordList').innerHTML = arrStr;
+
+            var x = 0;
+            while (x < numWords) {
+                document.getElementById('wordspan' + x).addEventListener("click", function () {
+                    document.getElementById("favList").appendChild(this);
+                });
+                x++;
+            }
+
+
+            arrStr = "";
+        }  
+    });
+
+
+</script>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>

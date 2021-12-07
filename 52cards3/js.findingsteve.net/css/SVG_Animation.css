@@ -1,0 +1,65 @@
+﻿/*body {
+    margin: 0;
+    font-family: "Montserrat";
+}*/
+
+
+.polymorph {
+    fill: yellow;
+}
+
+#cta, #cta2 {
+    position: absolute;
+    margin: 10em auto 0 auto;
+    left: 0;
+    right: 0;
+    width: 20%;
+    background: none;
+    border: 2px dashed silver;
+    border-radius: 15px;
+    padding: 15px;
+    color: black;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: 0;
+}
+
+/*p {
+    font-size: 1.2em;
+}*/
+
+#cta2 {
+    width: auto;
+    margin: 10px auto;
+    background-color: grey;
+}
+
+#blip {
+    position: absolute;
+    color: #398f5a;
+    right: 15%;
+    top: 0%;
+    opacity: 0;
+    /*width: 30%;*/
+    text-align:center;
+    transform: translateY(-800px);
+}
+
+/*phone */
+@media (max-width: 479px) {
+    #profile{
+        width:300px;
+        margin: 0 auto;
+    }
+
+    .polymorph {
+        display: none;
+    }
+
+    #cta {
+        position: absolute;
+        top:2;
+        
+        font-size: 80%
+    }
+}

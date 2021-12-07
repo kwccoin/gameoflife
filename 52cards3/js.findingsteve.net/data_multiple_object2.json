@@ -1,0 +1,28 @@
+﻿{
+  "Student": [
+    {
+      "Id": "1",
+      "Name": "John"
+    },
+    {
+      "Id": "2",
+      "Name": "Mary"
+    },
+    {
+      "Id": "3",
+      "Name": "Mike"
+    }
+  ],
+
+  "Course": [
+    {
+      "Id": "10",
+      "CourseName": "Web Design"
+    },
+    {
+      "Id": "11",
+      "CourseName": "Database Design"
+    }
+  ]
+}
+

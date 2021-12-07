@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+<link rel="stylesheet" href="css/tingle.css" media="all">
+
+
+<style>
+    .del {
+        padding: 0;
+        border: none;
+        background: none;
+        color: red;
+        margin-left: 10px;
+    }
+
+    #app-search .input-group-addon-btn {
+        padding: 0;
+    }
+
+    button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        height: 100%;
+    }
+
+    
+</style>
+<h1>To Do List</h1>
+
+<fieldset>
+    
+    <!--1. Create user interface-->
+    <!--Input-->
+    <div class="input-group">
+        <input id="todo" type="text" class="form-control" placeholder="New Item" />
+        <span class="input-group-btn">
+            <button id="btn" class="btn btn-default" type="submit">
+                <i class="fa fa-plus"></i>
+            </button>
+        </span>
+    </div>
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"><span id="totalItemAdded"></span></div>
+            <div class="col-md-6"><span class="pull-right"><a id="clearAll" style="color:red;cursor: pointer;">Delete All Items</a></span></div>
+        </div>
+    </div>
+    <div id="result">
+        <!--Output-->
+        <ul id="toDoList"></ul>
+    </div>
+    <p class="mesg alert alert-success"></p>
+    
+</fieldset>
+
+<fieldset>
+    
+    
+</fieldset>
+
+<fieldset>
+    <legend>Coding Techniques Used</legend>
+    <ul>
+        <li>Implement Tingle model popup</li>
+        <li>Some JQuery function used: append(), parent(), children(), show(), hide(), remove(), fadeIn(), delay(), fadeOut(), prop(), sortable()</li>
+        <li>Event Listener: textbox keypress, button click</li>
+        <li>Implement Bootstrap framework for forms and labels</li>
+        <li>Font Awesome icon</li>
+        <li>Note: No database are used to store the data.</li>
+    </ul>
+</fieldset>
+
+<script src="js/tingle.js"></script>
+
+<script>
+    // Add a "checked" symbol when clicking on a list item
+    //var list = document.querySelector('ul');
+    //list.addEventListener('click', function (ev) {
+    //    if (ev.target.tagName === 'LI') {
+    //        ev.target.classList.toggle('checked');
+    //    }
+    //}, false);
+
+    // tofix. when click clear all items, popup works. but cancel button is not working.
+
+    // tingle model popup
+    var modalButtonOnly = new tingle.modal({
+        closeMethods: ['overlay', 'button', 'escape'],
+        footer: true,
+        stickyFooter: true
+    });
+    
+    function response(res) {
+        debugger;
+
+        // setTimeout to delay 3 second to let user see the dices before popup the modal message.
+        setTimeout(function () {
+            // returns an array of the values from the dice
+            debugger;
+            console.log(res);
+
+        }, 3000); // setTimeout to delay 3 second to let user see the dices before popup the modal message.
+    }
+
+    function showPopup(content) {
+        debugger;
+        modalButtonOnly.open();
+        modalButtonOnly.setContent(content);
+
+        modalButtonOnly.addFooterBtn('Yes', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function () {
+            modalButtonOnly.close();
+        });
+
+        modalButtonOnly.addFooterBtn('Cancel', 'tingle-btn tingle-btn--default tingle-btn--pull-right', function () {
+            modalButtonOnly.close();
+        });
+    }
+
+    $(function () {
+        $('#toDoList').sortable();
+        $('#btn').attr("disabled", "disabled");
+
+        $(".mesg").hide();
+        $("#clearAll").hide();
+
+        //2. Create the EventListener to listen
+        // to click event for Add button
+        $('#btn').click(function (event) {
+            
+            $('#btn').attr("disabled", "disabled");
+            $("#btn").prop("disabled", true);
+
+            $(".mesg").show();
+            $("#clearAll").show();
+                        
+            // 3. Make sure you can grab textbox value.
+            var toDoItem = $('#todo').val();
+
+            //// 4. Create list tag and put in the toDoItem content in it.
+            var item = $("<li></li>").text(toDoItem);
+
+            //// 7. Append delete button into item.
+            $(item).append(" <button class='del'>x</button>");    
+
+
+
+            //// 5. Append list tag into ol tag.
+            $('#toDoList').append(item);
+            //$("#toDoList").append("<li><span><i class='fa fa-trash'></i></span> " + toDoItem + "</li>")
+
+            $('.mesg').text("Item added.");
+            // tofix. add bootstrap class,  alert alert-success. able to add, but unable to remove class during click event.
+
+            updateItemCount()
+            clearMesg();           
+
+            // 6. Clear the textbox for next input.
+            $('#todo').val("");
+
+            // 8. Create EventListener for click event for delete button.
+            // Note: Delete button EventListener is inside Add button EventListener.
+            $(".del").on("click", function (e) {
+               
+                $(this).parent().remove();
+
+                // "this" keyword is the delete button.
+                // delete button's "parent" is li tag.
+
+                $('.mesg').text("Item deleted.");
+                clearMesg();
+
+                updateItemCount()
+
+                if ($("#toDoList").children().length === 0) {
+
+                    // Hide Clear All button if there is no to-do-list items.
+                    $("#clearAll").hide();
+
+                    // Disable Add button.
+                    $("#btn").prop("disabled", true);
+                }
+            });
+
+            $("#btn").prop("disabled", false);
+
+        });
+
+        // If user press keyboard enter key, it will trigger the Add button.
+        $('#todo').keypress(function (e) {
+            console.log('keypress');
+            if (e.which == 13) {//Enter key pressed
+                console.log('entered.');
+                $('#btn').click();//Trigger search button click event
+            }
+        });
+
+        $('#clearAll').click(function () {
+            $('#btn').attr("disabled", "disabled");
+
+            $(".mesg").hide();          
+
+            if ($("#toDoList").children().length > 0) {
+                showPopup(`<h1>Are you sure?</h1>`);
+
+                //use if statement to block the listItems.remove();
+                $("#toDoList").children().remove();
+
+                $('.mesg').text("All items deleted.");
+                clearMesg();
+                //setTimeout(clearMesg, 2000);
+
+                updateItemCount()
+            } else {
+                $('.mesg').text("No item to delete.");
+                clearMesg();
+                //setTimeout(clearMesg, 2000);
+            }
+        })
+
+        function updateItemCount() {
+            $('#totalItemAdded').text("Total Items: " + $("#toDoList").children().length);
+
+            if ($("#toDoList").children().length > 0) {
+                $("#clearAll").show();
+                $("#totalItemAdded").show();
+            } else {
+                $("#clearAll").hide();
+                $("#totalItemAdded").hide();
+            }
+        }
+
+        //keydown - Fires when the user depresses a key. It repeats while the user keeps the key depressed.
+        //keypress - Fires when an actual character is being inserted in, for instance, a text input. It repeats while the user keeps the key depressed.
+        //keyup - Fires when the user releases a key, after the default action of that key has been performed.
+        // change - Fires when click next thing, example next textbox. If one textbox, this won't work.
+
+        $('#todo').on("keydown keypress", checkTextBox);
+
+
+        function checkTextBox() {
+            const textBoxLength = $('#todo').val().length;
+
+            if (textBoxLength < 2) {
+                //$('#btn').attr("disabled", "disabled");
+                $("#btn").prop("disabled", true);
+
+            } else {
+                //$("#btn").removeAttr("disabled");
+                $("#btn").prop("disabled", false);
+            }
+        }
+
+        function clearMesg() {            
+            //$(".mesg").stop().fadeIn(500).delay(500).fadeOut(500);
+            let $mesg = $(".mesg");
+            if (!$mesg.is(":animated")) {
+                $(".mesg").stop().fadeIn(500).delay(500).fadeOut(500);
+            }
+        }
+
+    });
+
+</script>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+
+<h1>Array - Splice vs Slice</h1>
+
+<fieldset>
+    <legend>Input</legend>
+    <p id="nums">Array 1 [20, 10, 5, 12, 2]</p>
+    <p id="nums">Array 2 [20, 10, 5, 12, 2]</p>
+    <p id="nums">Array 3 []</p>
+</fieldset>
+
+<fieldset>
+    <legend>Splice</legend>
+    <div class="pink">
+        <button class="mybutton" onclick="viewArray1()">View array 1</button>
+        <button class="mybutton" onclick="spliceElementFromArray()">Extract out '12' from Array 1</button>
+        <button class="mybutton" onclick="spliceInsertElementIntoArray()">Insert new number '15' in between first element '20' and second element '10' into Array 1</button>
+        <button class="mybutton" onclick="cloneFromArray1ToArray3()">Move all elements from Array 1 to Array 3</button>
+    </div>      
+</fieldset>
+
+<fieldset>
+    <legend>Slice</legend>
+    <div class="pink">
+        <button class="mybutton" onclick="viewArray2()">View array 2</button>
+        <button class="mybutton" onclick="sliceElementFromArray()">Extract out '12' from Array 2</button>
+        <button class="mybutton" onclick="sliceLastElementFromArray()">Extract last element from Array 2</button>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>Others</legend>
+    <div class="pink">
+        <button class="mybutton" onclick="emptyArrays()">Empty all arrays</button>
+        <button class="mybutton" onclick="copyArray1ToArray3()">Copy Array 1 to Array 3</button>
+        <button class="mybutton" onclick="viewArray3()">View array 3</button>
+        <button class="mybutton" onclick="concatArray()">Append Array 1 to Array 2</button>
+    </div>
+</fieldset>
+
+
+Note:
+<ul>
+    <li>Splice - The original array will be modified. Thus, move can be done only once because original array is no more after the clone.</li>
+    <li>Slice - The original array will not be modified.</li>
+</ul>
+
+
+<fieldset>
+    <legend>Output</legend>
+
+    <div class="result">
+        <div>
+            <fieldset>
+                <legend>Array 1</legend>
+                <div id="resultArray1"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Splice Extract</legend>
+                <div id="resultSplice"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend></legend>
+                <div></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Array 2</legend>
+                <div id="resultArray2"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Slice Extract</legend>
+                <div id="resultSlice"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend></legend>
+                <div></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Array 3</legend>
+                <div id="resultArray3"></div>
+            </fieldset>
+        </div>
+    </div>
+</fieldset>
+
+
+<fieldset>
+    <legend>Coding Techniques Used</legend>
+    <ul>
+        <li>splice(), slice() method</li>
+        <li>CSS: Flexbox</li>
+    </ul>
+</fieldset>
+
+<script>
+    debugger;
+
+    const arr1 = [20, 10, 5, 12, 2];
+    var arr2 = [20, 10, 5, 12, 2]; // because there is a concat/append in one of the functions below.
+    var arr3 = [];
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        debugger;
+
+    })
+
+    // The original array will be modified.
+    function spliceElementFromArray() {
+        document.getElementById("resultSplice").innerHTML = arr1.splice(3, 1);
+        //array.splice(insertAtIndex, 0, stringToBeInserted);
+    }
+
+    function viewArray1() {
+        document.getElementById("resultArray1").innerHTML = arr1;
+    }
+
+    function spliceInsertElementIntoArray() {
+        document.getElementById("resultSplice").innerHTML = arr1.splice(1, 0, "15");
+        //array.splice(insertAtIndex, 0, stringToBeInserted);
+    }
+
+    // The original array will not be modified.
+    function sliceElementFromArray() {
+        document.getElementById("resultSlice").innerHTML = arr2.slice(3, 4);
+    }
+
+    function sliceLastElementFromArray() {
+        document.getElementById("resultSlice").innerHTML = arr2.slice(-1);
+    }
+
+    function viewArray2() {
+        document.getElementById("resultArray2").innerHTML = arr2;
+    }
+
+    function cloneFromArray1ToArray3() {
+        debugger;
+        arr3 = arr1.splice(0);
+        document.getElementById("resultArray3").innerHTML = arr3;
+    }
+
+    function emptyArrays() {
+        arr1.length = 0;
+        arr2.length = 0;
+        arr3.length = 0;
+    }
+
+    function copyArray1ToArray3() {
+        arr3 = arr1;
+    }
+
+    function viewArray3() {
+        document.getElementById("resultArray3").innerHTML = arr3;
+    }
+
+    function concatArray() {
+        arr2 = arr2.concat(arr1);
+        //To merge large arrays we use
+
+        //Array.push.apply(arr2, arr1)
+    }
+    
+</script>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>

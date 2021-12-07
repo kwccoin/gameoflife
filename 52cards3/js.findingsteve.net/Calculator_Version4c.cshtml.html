@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+<style>
+    .containerCal {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 80px 80px 80px 80px;
+        grid-template-rows: 40px 80px;
+        grid-template-areas: "header header header header" "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main";
+        border: 1px solid black;
+        max-width: 320px;
+        margin: 0 auto;
+        background-color: black;
+        padding: 0px;
+    }
+
+    .item-header1 {
+        grid-area: header;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        background-color: black;
+        color: silver;
+        text-align: right;
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .item-header2 {
+        grid-area: header;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        background-color: black;
+        color: white;
+        text-align: right;
+        font-size: 50px;
+        padding: 10px;
+    }
+
+
+    /* Some hover effects */
+    .btn:hover {
+        background-color: yellow;
+        cursor: pointer;
+        color: black;
+        /*box-shadow: 0px 4px silver;*/
+    }
+
+    .btn {
+        font-size: 150%;
+        background-color: whitesmoke;
+        border: none;
+        color: darkblue;
+        padding: 20px;
+        text-align: center;
+        margin: 1px;
+        border-radius: 1%;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .btnC {
+        color: red;
+    }
+</style>
+
+<h1>Simple Calculator - Version 4c</h1>
+
+<body onload="reset()">
+
+    <fieldset>
+        <legend>Actual Output</legend>
+    </fieldset>
+
+    <div class="containerCal">
+        <div class="item item-header1" id="expressionString"></div>
+        <div class="item item-header2" id="expressionResult"></div>
+
+        <input class="btn btnC" id="reset" type="button" value="C" onclick="reset()" />
+        <input class="btn" id="" type="button" value="" />
+        <input class="btn" id="operatorDivide" type="button" value="/" />
+        <input class="btn" id="operatorMultiply" type="button" value="*" />
+
+        <input class="btn" id="number9" type="button" value="9" />
+        <input class="btn" id="number8" type="button" value="8" />
+        <input class="btn" id="number7" type="button" value="7" />
+        <input class="btn" id="operatorMinus" type="button" value="-" />
+
+        <input class="btn" id="number6" type="button" value="6" />
+        <input class="btn" id="number5" type="button" value="5" />
+        <input class="btn" id="number4" type="button" value="4" />
+        <input class="btn" id="operatorPlus" type="button" value="+" />
+
+        <input class="btn" id="number3" type="button" value="3" />
+        <input class="btn" id="number2" type="button" value="2" />
+        <input class="btn" id="number1" type="button" value="1" />
+        <input class="btn orange" id="Submit1" type="button" value="=" onclick="evaluationExpression(this.value, false)" />
+
+        <input class="btn" id="" type="button" value="" />
+        <input class="btn" id="number0" type="button" value="0" />
+        <input class="btn" id="decimal" type="button" value="." />
+        <input class="btn" id="" type="button" value="" />
+
+    </div>
+
+    <p></p>
+
+
+
+
+    <fieldset>
+        <legend>Features</legend>
+        <ol>
+            <li>Display temporary result while entering number (<span class="red">new</span>)</li>
+            <li>Percentage % key (<span class="red">new</span>)</li>
+            <li>Back key (<span class="red">new</span>)</li>
+            <li>Added CSS </li>
+            <li>Keep appending string calculation like in Android stock calculator. Example, 1+2*2 </li>
+            <li>Order of calculation is BODMAS. Example, 1+2*2=5 (not 6). For Window calculator, result is 6.</li>
+            <li>Accept number key from 1-9</li>
+            <li>Accept decimal</li>
+            <li>Accept zero</li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <legend>Code</legend>
+        <ul>
+            <li>Main function - One addEventListener for the 0-9 keys, decimal key and all four operator (+ - * /) keys are dynamically generated using foreach loop</li>
+            <li>Total small functions: 5</li>
+            <li>Total anonymous functions: 2</li>
+            <li>Some Javascript built-in function used: eval(), split(), includes()</li>
+            <li>Total lines of code: 83 (excluding comment)</li>
+            <li>Total Passed Test Cases: 15</li>
+            <li>Main Design Ideas: Use boolean to check key type and last number string.</li>
+            <li>CSS Grid Layout</li>
+            <li>More comment in the code.</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Passed Test Cases</legend>
+        
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 1</h6>
+                    <ol>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: =</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 2</h6>
+                    <ol>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: =</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 3</h6>
+                    <ol>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: =</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 4</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: + </li>
+                        <li>Input: 2</li>
+                        <li>Input: * </li>
+                        <li>Input: 2</li>
+                        <li>Input: =</li>
+                        <li>Output: 5 (not 6)</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 5</h6>
+                    <ol>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: +</li>
+                        <li>Input: + (Not Allowed)</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 6</h6>
+                    <ol>
+                        <li>Input: 0</li>
+                        <li>Input: 1</li>
+                        <li>Output: 1</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 7</h6>
+                    <ol>
+                        <li>Input: 0</li>
+                        <li>Input: 0 (Not Allowed)</li>
+                        <li>Output: 0</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 8</h6>
+                    <ol>
+                        <li>Input: 1.1</li>
+                        <li>Input: +</li>
+                        <li>Input: 2.2</li>
+                        <li>Output: 3.3000000000000003</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 9</h6>
+                    <ol>
+                        <li>Input: .</li>
+                        <li>Output: 0.</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 10</h6>
+                    <ol>
+                        <li>Input: +</li>
+                        <li>Output: 0+</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 11</h6>
+                    <ol>
+                        <li>Input: =</li>
+                        <li>Output: 0</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 12</h6>
+                    <ol>
+                        <li>Input: 0</li>
+                        <li>Input: +</li>
+                        <li>Input: 0</li>
+                        <li>Input: 0</li>
+                        <li>Output: 0+0 (Not 0+00)</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 13</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: +</li>
+                        <li>Input: -</li>
+                        <li>Output: 1-</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 14</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: +</li>
+                        <li>Input: =</li>
+                        <li>Output: 1</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 15</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: - (or * or /)</li>
+                        <li>Input: 0</li>
+                        <li>Input: 0</li>
+                        <li>Output: 1-00 (Should be 1-0)</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</body>
+
+
+
+<script>
+    // design notes: main things to check.
+
+    // 2. check last number string first character.
+    // if 0 and current key is numbers 1-9, then replace.
+    // if 0 and current key is 0, do nothing.
+    // if 0 and current key is decimal, then append.
+    // if 0 and current key is operator, then append.
+
+    // if 1-9 and current key is 0-9, then append.
+    // if 1-9 and current key is decimal, if not extra decimal then append. else do nothing.
+    // if 1-9 and current key is operator, then append.
+
+    // if "" and current key is numbers 0-9, then append.
+    // if "" and current key is decimal, then "0."
+    // if "" and current key is operator, then "0."
+
+
+    // 2. no need to check last number string first.
+    // if current key is numbers 0-9, then replace.
+    // if current key is decimal, then "0.".
+    // if current key is operator, replace with current operator.
+
+    // solution: add extra parameter in evaluationExpression function. tempResult = yes, no.
+
+    // todo: back button to remove the last string.
+
+    var keys = document.querySelectorAll("#decimal, #number0, #number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #operatorPlus, #operatorMinus, #operatorMultiply, #operatorDivide");
+
+    var expString = document.getElementById('expressionString');
+    var expResult = document.getElementById('expressionResult');
+    var lastNumString = "";
+    var numberType;
+
+    // design notes: reason to have just one dynamic addeventlistener is reduce repeat checking for numbers and operator keys.
+    keys.forEach(function (elem) {
+        elem.addEventListener("click", function (event) {
+            debugger;
+
+            // 1. Check each entered key and set key type.
+            switch (event.target.value) {
+                case "0":
+                    keyType = "zero";
+                    break;
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    keyType = "number1-9";
+                    break;
+                case ".":
+                    keyType = "decimal";
+                    break;
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                    keyType = "operator";
+                    break;
+                default:
+                    break;
+            }
+
+            // 2. Check key type first. 
+            // 3. Check last number string for each key type.
+            switch (keyType) {
+                case "number1-9":
+                    if (lastNumString == "0") {
+                        expString.innerHTML = replaceLastCharString((expString.innerHTML), event.target.value);
+                    } else {
+                        expString.innerHTML += event.target.value; // append
+                    }
+
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "zero":
+                    if (lastNumString == 0) {
+                        console.log("Do nothing. Should not show 00.");
+                    } else {
+                        expString.innerHTML += event.target.value; // append
+                    }
+
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "decimal":
+                    if (lastNumString == "") {
+                        expString.innerHTML += "0."; // append
+                    } else {
+                        //if not extra decimal then append. else do nothing.
+                        if (lastNumString.includes(".") && event.target.value == ".") {
+                            console.log('Do nothing. Reason: Prevent more than one decimal.');
+                        } else {
+                            expString.innerHTML += event.target.value; // append
+                        }
+                    }
+                    
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "operator":
+                    if (lastNumString == "") {
+                        expString.innerHTML += "0" + event.target.value; // append leading zero.
+                    }
+                    else {
+                        if (isLastCharAnOperator(expString.innerHTML)) {
+                            expString.innerHTML = replaceLastCharString((expString.innerHTML), event.target.value);
+                        } else {
+                            expString.innerHTML += event.target.value; // append
+                        }
+                    }
+                   
+                    lastNumString = "";
+                    break;
+                default:
+                    console.log("Uncaught exception.");
+                    break;
+            }
+
+            evaluationExpression(expString.innerHTML, true);
+        });
+    });
+
+    function lastNumberString(str) {
+        //var result = str.split(/(?=[+])/);
+        //return result[result.length - 1];
+       // str = "adfds+fsdf-sdf";
+
+        var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?'];
+        console.log(separators.join('|'));
+        var result = str.split(new RegExp(separators.join('|'), 'g'));
+        console.log(result[result.length-1]);
+        return result[result.length - 1];
+    }
+
+    function replaceLastCharString(str, char) {
+        // optional technique: StringUtils.chop(str);
+        // remarks substring method is not null-safe.
+        var xStr = str.substring(0, str.length - 1);
+        return xStr + char;
+    }
+
+    function isLastCharAnOperator(str) {
+        var isLastCharOperator = false;
+        var lastChar = str.substring(str.length - 1);
+        var operators = ["+", "-", "*", "/", ];
+
+        for (x = 0; x < operators.length - 1; x++) {
+            if (lastChar == operators[x]) {
+                isLastCharOperator = true;
+                break;
+            }
+        }
+        return isLastCharOperator;
+    }
+
+    function reset() {
+        expResult.innerHTML = 0;
+        expString.innerHTML = "";
+        lastNumString = "";
+    }
+
+    function evaluationExpression(operator, isTemp) {
+        debugger;
+
+        if (!isTemp) {
+            if (isLastCharAnOperator(expString.innerHTML)) {
+                expString.innerHTML = expString.innerHTML.slice(0, -1);
+                debugger;
+            }
+        }
+
+        if (eval(expString.innerHTML) == null) { // if user key in equal "=" as first key.
+            expResult.innerHTML = "0";
+        } else {
+            expResult.innerHTML = eval(expString.innerHTML);
+        }
+
+        if (!isTemp) {
+            expString.innerHTML = "";
+            lastNumString = "";
+            document.getElementById('expressionResult').style.color = "white";
+            document.getElementById('expressionResult').style.fontSize = "50px";
+        } else {
+            document.getElementById('expressionResult').style.color = "gray";
+            document.getElementById('expressionResult').style.fontSize = "30px";
+        }
+
+    }
+
+</script>
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>

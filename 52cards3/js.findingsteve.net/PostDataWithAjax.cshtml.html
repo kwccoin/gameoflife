@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/themes/blitzer/jquery-ui.css"
+      rel="Stylesheet" type="text/css" />
+
+<h1>Post Data With Ajax</h1>
+
+<fieldset>
+    <legend>Input</legend>
+
+    <form id="myForm" class="form">
+        <input name="myName" type="text" placeholder="data to be sent" />
+        <p></p>
+        <input type="button" value="Submit form with ajax for success response" id="btnAjaxPost" />
+        <p></p>
+        <input type="button" value="Submit form with ajax for fail response" id="btnAjaxPostFail" />
+    </form>
+</fieldset>
+
+<img id="progressLoader" src="img/loader.gif" height="42" width="42" />
+
+<fieldset>
+    <legend>Output</legend>
+
+    <div id="progressTimer"></div>
+    <div id="result"></div>
+
+</fieldset>
+
+<fieldset>
+    <legend>Coding Techniques Used</legend>
+    <ul>
+        <li>Some JQuery built-in function used: ajax(), serialize()</li>
+    </ul>
+</fieldset>
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
+<script>
+    //$("#progressTimer").progressTimer({
+    //    timeLimit: 20,
+    //    warningThreshold: 10,
+    //    baseStyle: 'progress-bar-warning',
+    //    warningStyle: 'progress-bar-danger',
+    //    completeStyle: 'progress-bar-info',
+    //    onFinish: function () {
+    //        console.log("I'm done");
+    //    }
+    //});
+
+    // to add normal loading gif will waiting for response.
+
+    $(document).ready(function () {
+
+        $("#progressLoader").hide();
+    
+        $('#btnAjaxPost').click(function () {
+
+            $("#progressLoader").show();
+
+
+            debugger;
+
+            //serializeArray() return array. Example below:
+            //[
+            //    { "name": "John", "age": "21" }
+            //]
+            var sdata = $("#myForm").serialize();  /* serialize() return string. Example, "name=John&age=21" */
+            debugger;
+            $.ajax({
+                // using ASP.NET MVC, url: "/Home/HelloWithAjax"
+                url: "PostDataWithAjaxProcess.cshtml",
+                type: "POST",
+                data: sdata,
+                //data: JSON.stringify(data), better than serialize().
+
+                success: function (response) {
+                    debugger;
+
+                    // using ASP.NET MVC, HelloWithAjax action method code is :
+                    // [HttpPost]
+                    // public ActionResult HelloWithAjax(string myName)
+                    // {
+
+                    // return Json(new { success = true, responseText = "Hello " + yourname }, JsonRequestBehavior.AllowGet);
+                    // }
+
+                    // Note: myName follows the textbox name value.
+
+                    // $('#result').text(response.responseText);
+                    // Output is "Hello John", if you type John in the textbox.
+
+                    $('#result').text("Data successfully posted using Ajax.");
+                    $("#progressLoader").hide();
+                },
+
+                error: function () {
+                    debugger;
+                    $('#result').text("Data fail to be posted using Ajax.");
+                },
+
+                done: function () {
+                    debugger;
+                    //progress.progressTimer('complete');
+
+                    $('#result').text("Done.");
+                }
+            });
+        });
+
+        $('#btnAjaxPostFail').click(function () {
+            debugger;
+
+            //serializeArray() return array. Example below:
+            //[
+            //    { "name": "John", "age": "21" }
+            //]
+            var sdata = $("#myForm").serialize();  /* serialize() return string. Example, "name=John&age=21" */
+            debugger;
+            $.ajax({
+                // invalid url to simulate error.
+                url: "xyz",
+                type: "POST",
+                method: "POST",
+
+                data: sdata,
+                //data: JSON.stringify(data).
+
+                success: function (response) {
+                    debugger;
+
+                    // using ASP.NET MVC, HelloWithAjax action method code is :
+                    // [HttpPost]
+                    // public ActionResult HelloWithAjax(string myName)
+                    // {
+
+                    // return Json(new { success = true, responseText = "Hello " + yourname }, JsonRequestBehavior.AllowGet);
+                    // }
+
+                    // Note: myName follows the textbox name value.
+
+                    // $('#result').text(response.responseText);
+                    // Output is "Hello John", if you type John in the textbox.
+
+                    $('#result').text("Data successfully posted using Ajax.");
+                },
+
+                error: function () {
+                    debugger;
+                    $('#result').text("Data fail to be posted using Ajax.");
+                },
+
+                done: function () {
+                    debugger;
+                    $('#result').text("Done.");
+                }
+            });
+        })
+    });
+</script>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>

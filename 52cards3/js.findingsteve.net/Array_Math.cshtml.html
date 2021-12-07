@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+
+<h1>Array - Math</h1>
+
+<fieldset>
+    <legend>Input</legend>
+    <p id="nums">[20, 10, 5, 12, 2]</p>
+</fieldset>
+
+<div class="pink">
+    <button class="mybutton" onclick="mapArray()">Each number in current array x 2</button>
+    <button class="mybutton" onclick="filterArray()">Filter all numbers above 10</button>
+    <button class="mybutton" onclick="findArray()">Find just number '10'</button>
+</div>
+
+<fieldset>
+    <legend>Output</legend>
+
+    <div class="result">
+        <div>
+            <fieldset>
+                <legend>Min</legend>
+                <div id="resultMin"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Max</legend>
+                <div id="resultMax"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Sum</legend>
+                <div id="resultSum"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Average</legend>
+                <div id="resultAvg"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Asc Order</legend>
+                <div id="resultAsc"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Desc Order</legend>
+                <div id="resultDesc"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Median</legend>
+                <div id="resultMedian"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Each number x2</legend>
+                <div id="resultMap"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Filtered number</legend>
+                <div id="resultFilter"></div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Find a number</legend>
+                <div id="resultFind"></div>
+            </fieldset>
+        </div>
+    </div>
+</fieldset>
+
+
+<fieldset>
+    <legend>Coding Techniques Used</legend>
+    <ul>
+        <li>let, const keyword</li>
+        <li>spread (...) syntax</li>
+        <li>reduce(), sort(), reverse(), map(), filter() method</li>
+        <li>Arrow function (=>) for shorter syntax</li>
+        <li>Math object</li>
+        <li>CSS: Flexbox</li>
+    </ul>
+</fieldset>
+
+<script>
+    debugger;
+    const arr = [20, 10, 5, 12, 2];
+    
+    document.addEventListener("DOMContentLoaded", function (event) {
+        debugger;
+
+        let minResult = document.getElementById('resultMin');
+        let maxResult = document.getElementById('resultMax');
+        let sumResult = document.getElementById('resultSum');
+        let avgResult = document.getElementById('resultAvg');
+        let orderAscResult = document.getElementById('resultAsc');
+        let orderDescResult = document.getElementById('resultDesc');
+        let medianResult = document.getElementById('resultMedian');
+
+        //spread syntax ...
+        const min = Math.min(...arr);
+
+        const max = Math.max(...arr);
+        // ...arr means below:
+        // const max = Math.max(20, 10, 5, 10);
+
+        // arrow function not working.
+        // const max = arr => Math.max(...arr);
+
+        // long version - start
+        // function max(arr) {
+        //    return Math.max.apply(null, arr);
+        // }
+        // console.log(max(arr));
+        // long version - end
+
+        // 'reduce' short version with anonymous function and arrow function.
+        const sum = arr.reduce((a, b) => a + b, 0);
+
+        // 'reduce' long version with function name - start
+        //const sum = arr.reduce(add, 0);
+
+        // function add(a, b) {
+        //    return a + b;
+        // }
+        // 'reduce' long version with function name - end
+
+        // for loop version - start
+        // var total = 0;
+        // for (var i in arr) {
+        //    total += arr[i];
+        // }
+        // for loop version - end
+
+        const avg = sum / arr.length;
+
+
+        const orderAsc = arr.sort((a, b) => a - b);
+
+        let lowMiddle = Math.floor((arr.length - 1) / 2);
+        let highMiddle = Math.ceil((arr.length - 1) / 2);
+        let median = (arr[lowMiddle] + arr[highMiddle]) / 2;
+
+
+        minResult.innerHTML = min;
+        maxResult.innerHTML = max;
+        sumResult.innerHTML = sum;
+        avgResult.innerHTML = avg;
+        orderAscResult.innerHTML = orderAsc;
+        orderDescResult.innerHTML = orderAsc.reverse();
+        medianResult.innerHTML = median;
+    })
+
+    function mapArray() {
+        debugger;
+        
+        // map function and arrow function shorter version - without extra function name.
+        document.getElementById('resultMap').innerHTML = arr.map((num) => num * 2);
+
+        // map function and arrow function longer version - with extra function name.
+        //document.getElementById('resultMap').innerHTML = arr.map((num) => multiply(num));
+
+        //function multiply(y) {
+        //    return y * 2;
+        //}
+       
+    }
+
+    function filterArray() {
+        // filter function and arrow function shorter version - without extra function name.
+        document.getElementById('resultFilter').innerHTML = arr.filter((num) => num > 10);
+
+        // filter function and arrow function longer version - with extra function name.
+        //document.getElementById('resultFilter').innerHTML = arr.filter((num) => filtering(num));
+
+        //function filtering(y) {
+        //    return y > 2;
+        //}
+    }
+
+    function findArray() {
+        document.getElementById('resultFind').innerHTML = arr.find((num) => num === 10);
+    }
+</script>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Javascript, C#, Java Android App - js.findingsteve.net</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+    <!-- jQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1858816121145627",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Nav -->
+        <div id="nav">
+            <!-- Main Nav -->
+            <div id="nav-fixed">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">js.findingsteve.net</a>
+                        <img src="img/stevelogo.png" style="width:50px" />
+                    </div>
+                    <!-- /logo -->
+                    <nav>
+                        <ul class="nav-menu nav navbar-nav">
+                            <li class="cat-1"><a href="Snippet.html">JS Snippets</a></li>
+                            <li class="cat-5"><a href="SnippetCSharp.html">C# Snippets</a></li>							
+                            <li class="cat-2"><a href="Videos.html">Videos</a></li>
+                            <li class="cat-4"><a href="Photo.html">Photo</a></li>
+                            <li class="cat-3"><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- search & aside toggle -->
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <!-- /search & aside toggle -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+            <!-- Aside Nav -->
+            <div id="nav-aside">
+                <!-- nav -->
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="Snippet.html">JS Snippets</a></li>
+                        <li><a href="SnippetCSharp.html">C# Snippets</a></li>						
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="Photo.html">Photo</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- aside nav close -->
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                <!-- /aside nav close -->
+            </div>
+            <!-- Aside Nav -->
+        </div>
+        <!-- /Nav -->
+    </header>
+    <!-- /Header -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" style="padding:10px">
+
+                
+<link rel="stylesheet" href="css/tingle.css" media="all">
+<style>
+    #numbersContainer {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+        #numbersContainer > div {
+            font-size: 250%;
+            padding: 10px;
+            background-color: yellow;
+            border-radius: 10px;
+            margin: 5px;
+            min-width: 100px;
+            min-height:100px;
+            text-align: center;
+            border: 1px solid silver;
+            /*box-sizing: border-box;*/
+        }
+
+    .number {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+        .number:hover {
+            cursor: pointer;
+        }
+</style>
+<h1>Tap 1 to 20</h1>
+
+<progress value="0" max="30" id="progressBar"></progress>
+
+<button id="btnNew" onclick="newGame()">New Game</button>
+
+<div id="numbersContainer"></div>
+
+<div id="message"></div>
+
+<script src="js/tingle.js"></script>
+<script>
+    var downloadTimer;
+    var win;
+
+    var correctSound = new Audio("Sound/correct.mp3");
+    var wrongSound = new Audio("Sound/wrong.mp4");
+
+    // tingle model popup
+    var modalTinyNoFooter = new tingle.modal();
+
+    var arrayNumber = [];
+
+    // Total numbers
+    var totalNum = 20;
+
+    function myTimer() {
+        var timeleft = 30;
+
+        downloadTimer = setInterval(function () {
+            document.getElementById("progressBar").value = 30 - --timeleft;
+
+
+            if (timeleft <= 0 && win == false) {
+                debugger;
+                clearInterval(downloadTimer);
+                $('#message').text('Game Over. Try again!').css('color', 'red');
+            }
+            else if (win == true) {
+                clearInterval(downloadTimer);
+                $('#message').text('Well Done!').css('color', 'blue');
+            }
+        }, 1000);
+    }
+
+    newGame();
+
+    function newGame() {
+        win = false;
+        $('#message').empty();
+        clearInterval(downloadTimer);
+        myTimer();
+
+        // Create an array
+        debugger;
+
+
+        // Clear all array.
+        arrayNumber.length = 0;
+
+        // Clear all div inside numbersContainer
+        $('#numbersContainer').empty();
+
+        for (x = 1; x <= totalNum; x++) {
+            arrayNumber.push(x);
+        }
+
+        // Shuffle the array.
+        shuffle(arrayNumber);
+
+        printArray();
+
+    }
+
+    function printArray() {
+        var currentSmallestNo;
+
+        console.log(arrayNumber.length);
+
+        // Get first smallest number which is 1.
+        currentSmallestNo = Math.min(...arrayNumber);
+
+        // Print out final array and create div tag with css class.
+        arrayNumber.forEach(function (item, index) {
+            debugger;
+            //console.log('test');
+            //console.log(item);
+
+            var divElement = document.createElement('div');
+            divElement.id = index;
+            divElement.innerText = item;
+            divElement.className = 'number';
+
+            // append div to numbersContainer
+            $('#numbersContainer').append(divElement);
+
+            
+        })
+
+        // create Event Listener for click
+        $('.number').on("click", function (event) {
+
+            if (currentSmallestNo === 20) {
+                win = true;
+            }
+
+
+            debugger;
+            console.log(typeof event.target.textContent);
+            console.log(typeof Math.min(...arrayNumber));
+
+            // Update currentSmallestNo
+            //currentSmallestNo = Math.min(...arrayNumber).toString();
+
+
+            // If user tap the correct answer, show correct. else wrong.
+            if (parseInt(event.target.textContent) === currentSmallestNo) {
+                debugger;
+                //correctSound.play();
+                playSound(correctSound);
+
+                // Option 1 - Start (Doesn't work for now)
+                // Remove smallest number from the array.
+                //arrayNumber.splice(index, 1);
+                //console.log(arrayNumber);
+
+                // Reprint updated array.
+                //printArray();
+                // Option 1 - Start (Doesn't work for now)
+
+                //Option 2 - Start (Add class to hide the item)
+                debugger;
+                //$('#' + index).css('visibility', 'visible');
+
+                // Update currentSmallestNo
+                //currentSmallestNo = Math.min(...arrayNumber).toString();
+
+                currentSmallestNo += 1;
+
+                $(this).hide();
+
+
+
+                debugger;
+
+                // Update message.
+
+                $('#message').text('Awesome!').css('color', 'blue');
+
+            } else {
+                playSound(wrongSound);
+                //wrongSound.play();
+
+                // Update message.
+                $('#message').text('Try again!').css('color', 'red');
+            }
+
+
+        })
+        debugger;
+
+    }
+
+    function playSound(player) {
+        setTimeout(function () {
+            player.play();
+
+            setTimeout(function () {
+                player.pause();
+                player.currentTime = 0;
+            }, 1000);
+        }, 100);
+    }
+
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+
+    function showPopup(content) {
+        debugger;
+        modalTinyNoFooter.open();
+        modalTinyNoFooter.setContent(content);
+
+    }
+
+</script>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /section -->
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- /Footer -->
+
+
+</body>
+</html>
