@@ -23,8 +23,13 @@ function g()
 {
    var x = 20;
    var y = 200
-   console.log("g(x) x:"+x+" f(x):"+x);
-   return f(x);
+   console.log("g(x) x:"+x+" f(x):"+f(x));
+   
+   function h(){
+      console.log("h(x) x:"+x+ " y:"+ y);
+   }
+   
+   return h; // f(x);
 }
 
 function g2f()
@@ -48,5 +53,10 @@ function myFunction()
   console.log("myFunction g2ffun()"+g2ffun()) 
   // !!!!! for some reasons it generate a log of function on function !!!!
   
-  document.getElementById("demo").innerHTML = f(g()); // print 10 not 20 !!! lexical scoping 5 + 6;
+  // document.getElementById("demo").innerHTML = f(g()); // print 10 not 20 !!! lexical scoping 5 + 6;
+    var gwithhfun = g;
+    console.log("myFunction g2ffun()"+gwithhfun()) 
+  
 }
+
+myFunction()
