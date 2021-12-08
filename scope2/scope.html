@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="scope.js"></script>
+    </head>
+<body>
+
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+
+<p id="demo">Original info</p>
+
+<!-- 
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+-->
+
+<h2>Demo External JavaScript</h2>
+
+<p id="demo">A Paragraph.</p> <!-- 2nd one does not count!!-->
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p>This example links to "myScript.js".</p>
+<p>(myFunction is stored in "myScript.js")</p>
+
+<script src="scope.js"></script>
+
+
+
+</body>
+</html> 
