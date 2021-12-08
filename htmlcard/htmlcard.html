@@ -1,0 +1,459 @@
+<html>
+<head>
+<title>Canvas HTML Element Up to 208 Card Pick Up Game Tutorial ... RJM Programming ... January 2016 ... thanks to http://stackoverflow.com/questions/9880279/how-do-i-add-a-simple-onclick-event-handler-to-a-canvas-element</title>
+<link href='//www.rjmprogramming.com.au/PHP/emboss_h1.css' rel='stylesheet' type='text/css'>
+<script language="JavaScript">
+var score = 0.0;
+var goes = 0.0;
+var realgoes = 0;
+var packs = 4;
+
+function cpacks(stv) {
+  var osis=document.getElementById('packs1');
+  if (osis) osis.value=stv;
+  osis=document.getElementById('packs2');
+  if (osis) osis.value=stv;
+  osis=document.getElementById('packs3');
+  if (osis) osis.value=stv;
+  osis=document.getElementById('packs4');
+  if (osis) osis.value=stv;
+  packs=eval(stv / 52);
+}
+
+function updatescore() {
+      var sis=document.getElementById('score');
+      sis.innerHTML = score.toString();
+      var gis=document.getElementById('goes');
+      gis.innerHTML = goes.toString();
+}
+
+function checkget() {
+
+ if (window.location.search.indexOf("score") != (0 - 1)) {
+   packs = location.search.split('decks=')[1] ? eval(location.search.split('decks=')[1].split('&')[0]) : 4;
+   
+   var myprmstr = window.location.search.substr(1);
+      //alert(myprmstr);
+   
+   var xpos = myprmstr.indexOf("goes");
+   if (xpos != -1) {
+      document.getElementById('myh1').innerHTML = document.getElementById('myh1').innerHTML.replace(' start ', ' resume ');
+
+      var gsuff = myprmstr.substr(xpos + 5);
+      goes = parseFloat(gsuff);
+      //alert(goes + ' ' + myprmstr.substr(xpos + 5));
+      myprmstr = myprmstr.substr(0, (xpos - 2));
+   }
+   xpos = myprmstr.indexOf("score");
+   if (xpos != -1) {
+      var ssuff = myprmstr.substr(xpos + 6);
+      score = parseFloat(ssuff);
+   }
+   updatescore();
+  }
+}
+</script>
+</head>
+<body onload="checkget();">
+<h1 id='myh1'>Select <select onchange=' cpacks(this.value); ' id='packs1'><option value=208>4 decks</option><option value=156>3 decks</option><option value=104>2 decks</option><option value=52>1 deck</option></select> card criteria, click anywhere on card table to shuffle, start game ... Take fewest goes to reach score of 200</h1><p>Score <span style='color:green;' id="score">0</span> achieved via <span  style='color:red;' id="goes">0</span> goes (<select onchange=' cpacks(this.value); ' id='packs2'><option value=208>4 decks</option><option value=156>3 decks</option><option value=104>2 decks</option><option value=52>1 deck</option></select>) &amp; your current card criteria guess is <select style='background-color: pink;' id="guess"><option value="">Your guess selection below ...</option><option value="hdr.">Red</option><option value="h">&nbsp;Hearts</option><option value="d">&nbsp;Diamonds</option><option value="csb.">Black</option><option value="s">&nbsp;Spades</option><option value="c">&nbsp;Clubs</option><option value="01">&nbsp;&nbsp;Ace</option><option value="02">&nbsp;&nbsp;2</option><option value="03">&nbsp;&nbsp;3</option><option value="04">&nbsp;&nbsp;4</option><option value="05">&nbsp;&nbsp;5</option><option value="06">&nbsp;&nbsp;6</option><option value="07">&nbsp;&nbsp;7</option><option value="08">&nbsp;&nbsp;8</option><option value="09">&nbsp;&nbsp;9</option><option value="10">&nbsp;&nbsp;10</option><option value="11">&nbsp;&nbsp;Jack</option><option value="12">&nbsp;&nbsp;Queen</option><option value="13">&nbsp;&nbsp;King</option></select></p>
+<canvas style='border: 5px solid green; background: url("images/back01.gif") #ffffff repeat; opacity: 0.3;' title='Select criteria &amp; click anywhere on card table to shuffle the cards &amp; start the game ... Take fewest goes to reach score of 200' id="canvaselement" width="1150" height="700" style="border: 1px solid green;" />
+<script language="JavaScript">
+
+var toggle = 0;
+var goodx = 10;
+var goody = 10;
+var inidone = 0;
+var curcard = 0;
+
+
+var worthof = new Array(0.0, eval(4.0 * 1.0), eval(13.0 * 1.0), eval(52.0 * 1.0), eval(2.0 * 1.0));
+
+var scoretoget = 200;
+var guessvalue = 0.0;
+var usedcards = [];
+var deckcards = [];
+var defcard = "images/back01.gif";
+var mypictures = new Array("images/01c.gif", 
+                           "images/01d.gif", 
+                           "images/01h.gif",
+                           "images/01s.gif",
+                           "images/02c.gif", 
+                           "images/02d.gif", 
+                           "images/02h.gif",
+                           "images/02s.gif",
+                           "images/03c.gif", 
+                           "images/03d.gif", 
+                           "images/03h.gif",
+                           "images/03s.gif",
+                           "images/04c.gif", 
+                           "images/04d.gif", 
+                           "images/04h.gif",
+                           "images/04s.gif",
+                           "images/05c.gif", 
+                           "images/05d.gif", 
+                           "images/05h.gif",
+                           "images/05s.gif",
+                           "images/06c.gif", 
+                           "images/06d.gif", 
+                           "images/06h.gif",
+                           "images/06s.gif",
+                           "images/07c.gif", 
+                           "images/07d.gif", 
+                           "images/07h.gif",
+                           "images/07s.gif",
+                           "images/08c.gif", 
+                           "images/08d.gif", 
+                           "images/08h.gif",
+                           "images/08s.gif",
+                           "images/09c.gif", 
+                           "images/09d.gif", 
+                           "images/09h.gif",
+                           "images/09s.gif",
+                           "images/10c.gif", 
+                           "images/10d.gif", 
+                           "images/10h.gif",
+                           "images/10s.gif",
+                           "images/11c.gif", 
+                           "images/11d.gif", 
+                           "images/11h.gif",
+                           "images/11s.gif",
+                           "images/12c.gif", 
+                           "images/12d.gif", 
+                           "images/12h.gif",
+                           "images/12s.gif",
+                           "images/13c.gif", 
+                           "images/13d.gif", 
+                           "images/13h.gif",
+                           "images/13s.gif",
+                           "images/01c.gif ", 
+                           "images/01d.gif ", 
+                           "images/01h.gif ",
+                           "images/01s.gif ",
+                           "images/02c.gif ", 
+                           "images/02d.gif ", 
+                           "images/02h.gif ",
+                           "images/02s.gif ",
+                           "images/03c.gif ", 
+                           "images/03d.gif ", 
+                           "images/03h.gif ",
+                           "images/03s.gif ",
+                           "images/04c.gif ", 
+                           "images/04d.gif ", 
+                           "images/04h.gif ",
+                           "images/04s.gif ",
+                           "images/05c.gif ", 
+                           "images/05d.gif ", 
+                           "images/05h.gif ",
+                           "images/05s.gif ",
+                           "images/06c.gif ", 
+                           "images/06d.gif ", 
+                           "images/06h.gif ",
+                           "images/06s.gif ",
+                           "images/07c.gif ", 
+                           "images/07d.gif ", 
+                           "images/07h.gif ",
+                           "images/07s.gif ",
+                           "images/08c.gif ", 
+                           "images/08d.gif ", 
+                           "images/08h.gif ",
+                           "images/08s.gif ",
+                           "images/09c.gif ", 
+                           "images/09d.gif ", 
+                           "images/09h.gif ",
+                           "images/09s.gif ",
+                           "images/10c.gif ", 
+                           "images/10d.gif ", 
+                           "images/10h.gif ",
+                           "images/10s.gif ",
+                           "images/11c.gif ", 
+                           "images/11d.gif ", 
+                           "images/11h.gif ",
+                           "images/11s.gif ",
+                           "images/12c.gif ", 
+                           "images/12d.gif ", 
+                           "images/12h.gif ",
+                           "images/12s.gif ",
+                           "images/13c.gif ", 
+                           "images/13d.gif ", 
+                           "images/13h.gif ",
+                           "images/13s.gif ",
+                           "images/01c.gif  ", 
+                           "images/01d.gif  ", 
+                           "images/01h.gif  ",
+                           "images/01s.gif  ",
+                           "images/02c.gif  ", 
+                           "images/02d.gif  ", 
+                           "images/02h.gif  ",
+                           "images/02s.gif  ",
+                           "images/03c.gif  ", 
+                           "images/03d.gif  ", 
+                           "images/03h.gif  ",
+                           "images/03s.gif  ",
+                           "images/04c.gif  ", 
+                           "images/04d.gif  ", 
+                           "images/04h.gif  ",
+                           "images/04s.gif  ",
+                           "images/05c.gif  ", 
+                           "images/05d.gif  ", 
+                           "images/05h.gif  ",
+                           "images/05s.gif  ",
+                           "images/06c.gif  ", 
+                           "images/06d.gif  ", 
+                           "images/06h.gif  ",
+                           "images/06s.gif  ",
+                           "images/07c.gif  ", 
+                           "images/07d.gif  ", 
+                           "images/07h.gif  ",
+                           "images/07s.gif  ",
+                           "images/08c.gif  ", 
+                           "images/08d.gif  ", 
+                           "images/08h.gif  ",
+                           "images/08s.gif  ",
+                           "images/09c.gif  ", 
+                           "images/09d.gif  ", 
+                           "images/09h.gif  ",
+                           "images/09s.gif  ",
+                           "images/10c.gif  ", 
+                           "images/10d.gif  ", 
+                           "images/10h.gif  ",
+                           "images/10s.gif  ",
+                           "images/11c.gif  ", 
+                           "images/11d.gif  ", 
+                           "images/11h.gif  ",
+                           "images/11s.gif  ",
+                           "images/12c.gif  ", 
+                           "images/12d.gif  ", 
+                           "images/12h.gif  ",
+                           "images/12s.gif  ",
+                           "images/13c.gif  ", 
+                           "images/13d.gif  ", 
+                           "images/13h.gif  ",
+                           "images/13s.gif  ",
+                           "images/01c.gif   ", 
+                           "images/01d.gif   ", 
+                           "images/01h.gif   ",
+                           "images/01s.gif   ",
+                           "images/02c.gif   ", 
+                           "images/02d.gif   ", 
+                           "images/02h.gif   ",
+                           "images/02s.gif   ",
+                           "images/03c.gif   ", 
+                           "images/03d.gif   ", 
+                           "images/03h.gif   ",
+                           "images/03s.gif   ",
+                           "images/04c.gif   ", 
+                           "images/04d.gif   ", 
+                           "images/04h.gif   ",
+                           "images/04s.gif   ",
+                           "images/05c.gif   ", 
+                           "images/05d.gif   ", 
+                           "images/05h.gif   ",
+                           "images/05s.gif   ",
+                           "images/06c.gif   ", 
+                           "images/06d.gif   ", 
+                           "images/06h.gif   ",
+                           "images/06s.gif   ",
+                           "images/07c.gif   ", 
+                           "images/07d.gif   ", 
+                           "images/07h.gif   ",
+                           "images/07s.gif   ",
+                           "images/08c.gif   ", 
+                           "images/08d.gif   ", 
+                           "images/08h.gif   ",
+                           "images/08s.gif   ",
+                           "images/09c.gif   ", 
+                           "images/09d.gif   ", 
+                           "images/09h.gif   ",
+                           "images/09s.gif   ",
+                           "images/10c.gif   ", 
+                           "images/10d.gif   ", 
+                           "images/10h.gif   ",
+                           "images/10s.gif   ",
+                           "images/11c.gif   ", 
+                           "images/11d.gif   ", 
+                           "images/11h.gif   ",
+                           "images/11s.gif   ",
+                           "images/12c.gif   ", 
+                           "images/12d.gif   ", 
+                           "images/12h.gif   ",
+                           "images/12s.gif   ",
+                           "images/13c.gif   ", 
+                           "images/13d.gif   ", 
+                           "images/13h.gif   ",
+                           "images/13s.gif   "
+);
+var thispicture = 0;
+
+var elem = document.getElementById('canvaselement');
+var elemLeft = elem.offsetLeft;
+var elemTop = elem.offsetTop;
+var context = elem.getContext('2d');
+var elements = [];
+var arr=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+
+
+shuffle();
+
+// Add event listener for `click` events.
+elem.addEventListener('click', function(event) {
+   elem.style.backgroundImage = "none";
+   elem.style.opacity = 1.0;
+   var x = event.pageX - elemLeft;
+   var y = event.pageY - elemTop;
+   
+   x = goodx; 
+   y = goody;
+
+   var r = Math.floor((Math.random()*256)+0); 
+   var g = Math.floor((Math.random()*256)+0); 
+   var b = Math.floor((Math.random()*256)+0);  
+   var thiscol ='#' + arr[(r-(r % 16)) / 16] + arr[r % 16] + arr[(g-(g % 16))  / 16] + arr[g % 16] + arr[(b-(b % 16))  / 16] + arr[b % 16];
+
+   elem.style.backgroundColor = thiscol;
+
+   var img=document.getElementById(deckcards[curcard].replace("images/","").replace(".gif","").replace("   ","3").replace("  ","2").replace(" ","1"));
+   var imgover=document.getElementById(defcard.replace("images/","").replace(".gif",""));
+   
+    
+   if (toggle == 0) {
+   //alert('Packs=' + packs);
+   document.getElementById('myh1').innerHTML = 'Change criteria selection maybe &amp; click card table to reveal card (' + "<select onchange=' cpacks(this.value); ' id='packs3'><option value=208>4 decks</option><option value=156>3 decks</option><option value=104>2 decks</option><option value=52>1 deck</option></select>".replace(eval(packs * 52), "" + eval(packs * 52) + " selected")  + ') ... Take fewest goes to reach score of 200';
+   context.drawImage(imgover,x,y);
+   } else {
+   //alert('packs=' + packs);
+   document.getElementById('myh1').innerHTML = 'Click anywhere on card table for a new card (' + "<select onchange=' cpacks(this.value); ' id='packs4'><option value=208>4 decks</option><option value=156>3 decks</option><option value=104>2 decks</option><option value=52>1 deck</option></select>".replace(eval(packs * 52), "" + eval(packs * 52) + " selected") + ') ... Take fewest goes to reach score of 200';
+   goes = goes + 1.0;
+   realgoes = realgoes + 1.0;
+   score = score + assess(curcard);
+   updatescore();
+   if (score >= 200) {
+      alert('Congratulations!   You got there in ' + goes + ' goes.   Is this your best?');
+      elem.width = elem.width;
+      elements = [];
+      curcard = 0;
+      deckcards = [];
+      usedcards = [];
+      window.location = './two_o_eight_pick_up.html';
+   }
+   // Add card
+   context.drawImage(img,x,y);
+   
+   if ((goodx + img.width + img.width + 10) > 1150) {
+     goodx = 10;
+     goody = goody + img.height + 10;
+   } else {
+     goodx = goodx + img.width + 10;
+   }
+   
+   usedcards[curcard] = deckcards[curcard];
+
+   curcard = curcard + 1;
+   if (curcard >= eval(52 * packs)) {
+     elem.width = elem.width;
+     elements = [];
+     curcard = 0;
+     deckcards = [];
+     usedcards = [];
+     var wl='';
+     if (score.toString().indexOf(".") == -1) {
+     if (goes.toString().indexOf(".") == -1) {
+     wl = wl + './two_o_eight_pick_up.html?score=' + score + '.0&goes=' + goes + '.0&decks=' + packs;
+     } else {
+     wl = wl + './two_o_eight_pick_up.html?score=' + score + '.0&goes=' + goes + '&decks=' + packs;
+     }
+     } else {
+     if (goes.toString().indexOf(".") == -1) {
+     wl = wl + './two_o_eight_pick_up.html?score=' + score + '&goes=' + goes + '.0&decks=' + packs;
+     } else {
+     wl = wl + './two_o_eight_pick_up.html?score=' + score + '&goes=' + goes + '&decks=' + packs;
+     }
+     }
+     window.location = wl;
+   }
+   }
+   toggle = 1 - toggle;
+
+}, false);
+
+function assess(thecard) {
+  var gs = document.getElementById('guess');
+  //alert(gs.value);
+  var lg = gs.value.length;
+  var factor = 0.0;
+  //alert("thecard=" + thecard);
+  var nnamecard = deckcards[thecard].replace("images/","").replace(".gif","").replace("   ","3").replace("  ","2").replace(" ","1");
+  //alert(nnamecard);
+  if (lg > 0) {
+    if (lg == 4) {
+      if (gs.value.indexOf(nnamecard.substring(2,3)) != -1) factor = 1.0; 
+    } else if (lg == 1) {
+      if (nnamecard.substring(0,3).indexOf(gs.value.substring(0)) != -1) factor = 1.0; 
+    } else if (lg == 2) {
+      if (nnamecard.substring(0,3).indexOf(gs.value.substring(0)) != -1) factor = 1.0; 
+    } else {
+      if (nnamecard.substring(0,3) == gs.value.substring(0,3)) factor = 1.0; 
+    }
+  }
+  var retval = worthof[lg] * factor;
+  worthof[1] = eval((eval(52.0 * packs) - realgoes) / eval(13.0 * packs));
+  worthof[2] = eval((eval(52.0 * packs) - realgoes) / eval(4.0 * packs));
+  worthof[3] = eval((eval(52.0 * packs) - realgoes) / eval(1.0 * packs));
+  worthof[4] = eval((eval(52.0 * packs) - realgoes) / eval(26.0 * packs));
+  return retval;
+}
+
+function longname(inn) {
+ var outn=inn;
+ outn = outn.replace("s", " of Spades");
+ outn = outn.replace("h", " of Hearts");
+ outn = outn.replace("c", " of Clubs");
+ if (outn.length <= 3) outn = outn.replace("d", " of Diamonds");
+ outn = outn.replace("01", "Ace");
+ outn = outn.replace("02", "Two");
+ outn = outn.replace("03", "Three");
+ outn = outn.replace("04", "Four");
+ outn = outn.replace("05", "Five");
+ outn = outn.replace("06", "Six");
+ outn = outn.replace("07", "Seven");
+ outn = outn.replace("08", "Eight");
+ outn = outn.replace("09", "Nine");
+ outn = outn.replace("10", "Ten");
+ outn = outn.replace("11", "Jack");
+ outn = outn.replace("12", "Queen");
+ outn = outn.replace("13", "King");
+ return outn;
+}
+
+function shuffle() {
+// Shuffle cards
+var ii, jj, kk=0, mm, found;
+var ourgs = document.getElementById('guess');
+
+for (ii=0; ii<eval(52 * packs); ii++) {
+  found = true;
+  while (found) {
+   mm = Math.floor((Math.random()*eval(52 * packs))+0);
+   found = false;
+   for (jj=0; jj<usedcards.length; jj++) {
+    if (usedcards[jj] == mypictures[mm]) found = true;
+   }
+  }
+  deckcards[kk] = mypictures[mm];
+  usedcards[kk] = mypictures[mm];
+  if (inidone == 0) {
+    ourgs.innerHTML = ourgs.innerHTML + '<option value="' + mypictures[ii].replace("images/","").replace(".gif","") + '">&nbsp;&nbsp;&nbsp;' + longname(mypictures[ii].replace("images/","").replace(".gif","")) + '</option>';
+    document.write('<img src="' + mypictures[mm] + '" id="' + mypictures[mm].replace("images/","").replace(".gif","").replace("   ","3").replace("  ","2").replace(" ","1") + '" width=47 height=49 style="width:47.5px;height:49.5px;display:none;" title="' + mypictures[mm].replace("images/","").replace(".gif","") + '"></img>');
+  }
+  kk = kk+1;
+}
+usedcards = [];
+if (inidone == 0) document.write('<img src="' + defcard + '" id="' + defcard.replace("images/","").replace(".gif","") + '" width=47 height=49 style="width:47.5px;height:49.5px;display:none;" title="' + defcard.replace("images/","").replace(".gif","") + '"></img>');
+
+inidone = 1;
+}
+
+updatescore();
+</script>
+
+</body>
+</html>
